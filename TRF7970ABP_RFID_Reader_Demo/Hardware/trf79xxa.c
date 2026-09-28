@@ -1285,8 +1285,12 @@ bool TRF79xxA_checkExternalRfField(void)
 //
 //===============================================================
 
+#if defined(__TI_COMPILER_VERSION__)
 #pragma vector=TIMER0_A0_VECTOR
 __interrupt void
+#else
+void __attribute__((interrupt(TIMER0_A0_VECTOR)))	// msp430-elf-gcc ignores #pragma vector
+#endif
 TRF79xxA_timerHandler(void)
 {
 	uint8_t ui8IrqStatus;
@@ -1322,8 +1326,12 @@ TRF79xxA_timerHandler(void)
 //
 //===============================================================
 
+#if defined(__TI_COMPILER_VERSION__)
 #pragma vector = PORT2_VECTOR
 __interrupt void
+#else
+void __attribute__((interrupt(PORT2_VECTOR)))		// msp430-elf-gcc ignores #pragma vector
+#endif
 TRF79xxA_irqHandler(void)							// interrupt handler
 {
 	uint8_t ui8IrqStatus;

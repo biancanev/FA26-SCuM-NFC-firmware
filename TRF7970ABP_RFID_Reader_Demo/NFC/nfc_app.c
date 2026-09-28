@@ -427,7 +427,7 @@ uint8_t NFC_appIso15693(void)
 	return STATUS_SUCCESS;
 }
 
-NFC_appTilelink(void)
+uint8_t NFC_appTilelink(void)
 {
 #ifdef ENABLE_15693
 	uint8_t ui8TagFound = STATUS_FAIL;
