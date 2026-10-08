@@ -145,20 +145,32 @@ void main(void)
 	// Enable IRQ Pin
 	IRQ_ON;
 
-#ifdef ENABLE_HOST
+#ifdef APP_TILELINK
+	UART_sendCString((uint8_t *) "TILELINK READY");	// tools/tsi_host.py waits for this line
+	UART_putNewLine();
+#elif defined(ENABLE_HOST)
 	UART_putIntroReaderMsg(RFID_READER_FW_VERSION, RFID_READER_FW_DATE);
 #endif
 
 	while(1)
 	{
+#ifdef APP_TILELINK
+		// Execute one host command (blocks until a line arrives)
+		NFC_appTilelink();
+#else
 		// Poll for NFC tags
 		NFC_findTag();
+#endif
 
 		// VLO drifts with temperature and over time, so it must be periodically recalibrated
 		// Calibrate the VLO every 25 passes of the NFC polling routine
 		ui8VLOCalibCount++;
 		if (ui8VLOCalibCount == 25)
 		{
+			// Let the UART finish sending the last reply first: the calibration
+			// drops SMCLK (the UART baud clock) to 1 MHz while it runs
+			while (UCA0STAT & UCBUSY);
+
 			// Calibrate VLO
 			MCU_calculateVLOFreq();
 			// Reset Calibration Counter

@@ -70,6 +70,7 @@ void UART_response(uint8_t * pui8Buffer, uint8_t ui8Length);
 void UART_putBuffer(const uint8_t * pui8Buffer, uint8_t ui8Length);
 void UART_putBufferAscii(const uint8_t * pui8Buffer, uint8_t ui8Length);
 void UART_sendCString(uint8_t * pui8Buffer);
+uint8_t UART_getLine(uint8_t * pui8Buffer, uint8_t ui8MaxLength);
 void UART_setup (void);
 void UART_putIntroReaderMsg(uint8_t * pui8VersionNumber, uint8_t * pui8VersionDate);
 void UART_putByteDecimalValue(uint8_t ui8HexByte);

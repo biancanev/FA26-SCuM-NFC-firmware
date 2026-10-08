@@ -50,7 +50,6 @@
  * segment initialization.
  */
  
-#include <intrinsics.h>
 #include "msp430.h"
 
 int _system_pre_init(void)

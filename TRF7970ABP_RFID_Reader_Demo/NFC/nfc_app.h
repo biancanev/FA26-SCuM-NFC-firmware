@@ -55,6 +55,14 @@
 #define ENABLE_15693
 #define ENABLE_FELICA
 
+// Run the SCuM NFC Modem (TileLink) host command loop instead of the
+// tag reader demo. Comment out to restore the original demo.
+#define APP_TILELINK
+
+#if defined(APP_TILELINK) && !defined(ENABLE_HOST)
+#error "APP_TILELINK needs ENABLE_HOST (uart.h) for its UART command interface"
+#endif
+
 //================================================================
 
 void NFC_findTag(void);

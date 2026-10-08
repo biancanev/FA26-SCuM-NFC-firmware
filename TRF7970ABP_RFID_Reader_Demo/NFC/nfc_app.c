@@ -427,73 +427,243 @@ uint8_t NFC_appIso15693(void)
 	return STATUS_SUCCESS;
 }
 
-NFC_appTilelink(void)
+//*****************************************************************************
+//
+//! NFC_appTilelink - Host command loop for sending SCuM v26 NFC Modem
+//! (TileLink) packets.
+//!
+//! Reads one ASCII command line from the UART, executes it, and replies with
+//! one line. Hex fields are case insensitive; spaces inside hex data are
+//! ignored.
+//!
+//!   F 1 | F 0             RF field on / off                      -> OK
+//!   M 100 | M 10          100% OOK / 10% ASK modulation           -> OK
+//!   T                     Send the wiki example write packet      -> OK | ERR
+//!   W <addr> <hex data>   Write data at addr (32 bit hex)         -> OK | ERR
+//!   R <addr> <len>        Read len (hex) bytes from addr          -> DATA | ERR
+//!   X <hex frame>         Send raw cmd..body bytes                -> OK | DATA | ERR
+//!
+//! A reply received to any packet is printed as "DATA <hex>". ERR is followed
+//! by the tTrfStatus value in hex.
+//!
+//! \return STATUS_SUCCESS if a command was executed, otherwise STATUS_FAIL.
+//
+//*****************************************************************************
+
+#ifdef APP_TILELINK
+
+#define TILELINK_LINE_SIZE	96
+
+static uint8_t g_pui8TilelinkLine[TILELINK_LINE_SIZE];
+
+static int8_t hexNibble(uint8_t ui8Char)
 {
-#ifdef ENABLE_15693
-	uint8_t ui8TagFound = STATUS_FAIL;
-	uint8_t ui8AddressedFlag = 0x00;
+	if ((ui8Char >= '0') && (ui8Char <= '9')) return ui8Char - '0';
+	if ((ui8Char >= 'A') && (ui8Char <= 'F')) return ui8Char - 'A' + 10;
+	if ((ui8Char >= 'a') && (ui8Char <= 'f')) return ui8Char - 'a' + 10;
+	return -1;
+}
 
-#if (TRF79xxA_VERSION == 70)
-	if (TRF79xxA_checkExternalRfField() == true)
+static uint8_t skipSpaces(uint8_t ui8Index, uint8_t ui8Length)
+{
+	while ((ui8Index < ui8Length) && (g_pui8TilelinkLine[ui8Index] == ' '))
 	{
-		return STATUS_FAIL;
+		ui8Index++;
 	}
-#endif
+	return ui8Index;
+}
 
-	TRF79xxA_setupInitiator(0x42);		// Configure the TRF79xxA for ISO15693 @ High Bit Rate, One Subcarrier, 1 out of 4
+// Parses one hex number (up to 8 digits). Returns the index after it, or 0 on error.
+static uint8_t parseHexNumber(uint8_t ui8Index, uint8_t ui8Length, uint32_t * pui32Value)
+{
+	uint8_t ui8Digits = 0;
+	int8_t i8Nibble;
 
-	// The VCD should wait at least 1 ms after it activated the
-	// powering field before sending the first request, to
-	// ensure that the VICCs are ready to receive it. (ISO15693-3)
-	MCU_delayMillisecond(20);
-
-	ISO15693_resetTagCount();
-
-	ui8TagFound = ISO15693_sendSingleSlotInventory();							// Send a single slot inventory request to try and detect a single ISO15693 Tag
-
-	// Inventory failed - search with full anticollision routine
-	if (ui8TagFound == STATUS_FAIL)
+	ui8Index = skipSpaces(ui8Index, ui8Length);
+	if ((ui8Index + 1 < ui8Length) && (g_pui8TilelinkLine[ui8Index] == '0') &&
+		((g_pui8TilelinkLine[ui8Index+1] == 'x') || (g_pui8TilelinkLine[ui8Index+1] == 'X')))
 	{
-		ISO15693_resetRecursionCount();			// Clear the recursion counter
-		MCU_delayMillisecond(5);				// Delay before issuing the anticollision commmand
-		ui8TagFound = ISO15693_runAnticollision(0x06, 0x00, 0x00);		// Send 16 Slot Inventory request with no mask length and no AFI
-		ui8AddressedFlag = 0x20; 			// Collision occurred, send addressed commands
+		ui8Index += 2;
 	}
 
-	if (ui8TagFound == STATUS_SUCCESS)
+	*pui32Value = 0;
+	while ((ui8Index < ui8Length) && ((i8Nibble = hexNibble(g_pui8TilelinkLine[ui8Index])) >= 0))
 	{
-		if (ISO15693_getTagCount() > 1)
+		*pui32Value = (*pui32Value << 4) | (uint8_t) i8Nibble;
+		ui8Index++;
+		ui8Digits++;
+	}
+
+	return ((ui8Digits == 0) || (ui8Digits > 8)) ? 0 : ui8Index;
+}
+
+// Decodes hex byte pairs in place to the start of the line buffer.
+// Returns the byte count, or -1 on an odd digit count / invalid character.
+static int16_t parseHexBytes(uint8_t ui8Index, uint8_t ui8Length)
+{
+	uint8_t ui8Count = 0;
+	int8_t i8High = -1;
+	int8_t i8Nibble;
+
+	for (; ui8Index < ui8Length; ui8Index++)
+	{
+		if (g_pui8TilelinkLine[ui8Index] == ' ')
 		{
-#ifdef ENABLE_HOST
-			UART_putNewLine();
-			UART_sendCString("Multiple ISO15693 Tags Found");
-			UART_putNewLine();
-			UART_sendCString("# of Tags Detected: ");
-			UART_putByteDecimalValue(ISO15693_getTagCount());
-			UART_putNewLine();
-			UART_sendCString("Place only 1 tag in RF Field to read data");
-			UART_putNewLine();
-#endif
+			continue;
+		}
+
+		i8Nibble = hexNibble(g_pui8TilelinkLine[ui8Index]);
+		if (i8Nibble < 0)
+		{
+			return -1;
+		}
+
+		if (i8High < 0)
+		{
+			i8High = i8Nibble;
 		}
 		else
 		{
-			NFC_appIso15693ReadTag(0x02 | ui8AddressedFlag);					// Read an ISO15693 tag
-//			NFC_appIso15693ReadExtendedTag(0x0A | ui8AddressedFlag);			// Read an ISO15693 tag which has extended protocol implemented
-//			ISO15693_sendReadMultipleBlocks(0x22,0x00,25);						// Example to read 25 blocks starting @ Block 0 from a tag which supports Read Multiple Block command
+			g_pui8TilelinkLine[ui8Count++] = (i8High << 4) | i8Nibble;	// write index trails read index
+			i8High = -1;
 		}
+	}
+
+	return (i8High < 0) ? ui8Count : -1;
+}
+
+static void putReply(tTrfStatus sStatus, bool bReplyExpected)
+{
+	if (sStatus == RX_COMPLETE)
+	{
+		UART_sendCString((uint8_t *) "DATA ");
+		UART_putBufferAscii(TRF79xxA_getTrfBuffer(), TRF79xxA_getRxBytesReceived());
+	}
+	else if (!bReplyExpected && ((sStatus == NO_RESPONSE_RECEIVED) || (sStatus == NO_RESPONSE_RECEIVED_15693)))
+	{
+		UART_sendCString((uint8_t *) "OK");
 	}
 	else
 	{
-#ifdef ENABLE_STANDALONE		// No card detected
-		LED_15693_OFF;
-#endif
+		UART_sendCString((uint8_t *) "ERR ");
+		UART_putByte((uint8_t) sStatus);
+	}
+	UART_putNewLine();
+}
+
+uint8_t NFC_appTilelink(void)
+{
+	static const uint8_t pui8ExampleBody[8] = {0x08, 0x07, 0x06, 0x05, 0x04, 0x03, 0x02, 0x01};
+	uint8_t ui8Length;
+	uint8_t ui8Index;
+	uint32_t ui32Address;
+	uint32_t ui32ReadLength;
+	int16_t i16Count;
+
+	ui8Length = UART_getLine(g_pui8TilelinkLine, TILELINK_LINE_SIZE);
+	if (ui8Length == 0)
+	{
+		return STATUS_FAIL;			// Empty line (e.g. the LF of a CRLF pair)
 	}
 
-	TRF79xxA_turnRfOff();						// Turn off RF field once done reading the tag(s)
-#endif
+	switch ((ui8Length > TILELINK_LINE_SIZE) ? 0 : g_pui8TilelinkLine[0])	// Reject truncated lines
+	{
+	case 'F':
+	case 'f':
+		ui8Index = skipSpaces(1, ui8Length);
+		if ((ui8Index < ui8Length) && (g_pui8TilelinkLine[ui8Index] == '1'))
+		{
+			Tilelink_fieldOn();
+		}
+		else if ((ui8Index < ui8Length) && (g_pui8TilelinkLine[ui8Index] == '0'))
+		{
+			Tilelink_fieldOff();
+		}
+		else
+		{
+			break;
+		}
+		UART_sendCString((uint8_t *) "OK");
+		UART_putNewLine();
+		return STATUS_SUCCESS;
 
-	return STATUS_SUCCESS;
+	case 'M':
+	case 'm':
+		ui8Index = skipSpaces(1, ui8Length);
+		if ((ui8Length - ui8Index == 3) && (g_pui8TilelinkLine[ui8Index] == '1') &&
+			(g_pui8TilelinkLine[ui8Index+1] == '0') && (g_pui8TilelinkLine[ui8Index+2] == '0'))
+		{
+			Tilelink_setAsk10(false);
+		}
+		else if ((ui8Length - ui8Index == 2) && (g_pui8TilelinkLine[ui8Index] == '1') &&
+				 (g_pui8TilelinkLine[ui8Index+1] == '0'))
+		{
+			Tilelink_setAsk10(true);
+		}
+		else
+		{
+			break;
+		}
+		UART_sendCString((uint8_t *) "OK");
+		UART_putNewLine();
+		return STATUS_SUCCESS;
+
+	case 'T':
+	case 't':
+		// NFC Modem wiki example: cmd 01, addr 0x80000000, length 8, body 08..01, CRC 31 2C
+		putReply(Tilelink_write(0x80000000, pui8ExampleBody, sizeof(pui8ExampleBody)), false);
+		return STATUS_SUCCESS;
+
+	case 'W':
+	case 'w':
+		ui8Index = parseHexNumber(1, ui8Length, &ui32Address);
+		if (ui8Index == 0)
+		{
+			break;
+		}
+		i16Count = parseHexBytes(ui8Index, ui8Length);
+		if (i16Count <= 0)
+		{
+			break;
+		}
+		putReply(Tilelink_write(ui32Address, g_pui8TilelinkLine, (uint8_t) i16Count), false);
+		return STATUS_SUCCESS;
+
+	case 'R':
+	case 'r':
+		ui8Index = parseHexNumber(1, ui8Length, &ui32Address);
+		if (ui8Index == 0)
+		{
+			break;
+		}
+		ui8Index = parseHexNumber(ui8Index, ui8Length, &ui32ReadLength);
+		if ((ui8Index == 0) || (ui32ReadLength == 0) || (ui32ReadLength > 0xFF))
+		{
+			break;
+		}
+		putReply(Tilelink_read(ui32Address, (uint8_t) ui32ReadLength), true);
+		return STATUS_SUCCESS;
+
+	case 'X':
+	case 'x':
+		i16Count = parseHexBytes(1, ui8Length);
+		if (i16Count <= 0)
+		{
+			break;
+		}
+		putReply(Tilelink_sendRaw(g_pui8TilelinkLine, (uint8_t) i16Count), false);
+		return STATUS_SUCCESS;
+
+	default:
+		break;
+	}
+
+	UART_sendCString((uint8_t *) "ERR ARG");
+	UART_putNewLine();
+	return STATUS_FAIL;
 }
+
+#endif
 
 //*****************************************************************************
 //

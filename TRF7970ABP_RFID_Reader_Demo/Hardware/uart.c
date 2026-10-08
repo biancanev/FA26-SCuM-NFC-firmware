@@ -262,6 +262,53 @@ UART_sendCString(uint8_t * pui8Buffer)
 
 //===============================================================
 //
+// UART_getLine - Receive one line from the UART
+//
+// \param pui8Buffer is where the line is stored (not terminated)
+// \param ui8MaxLength is the size of pui8Buffer
+//
+// Blocks until CR or LF is received. Characters beyond
+// ui8MaxLength are discarded.
+//
+// \return the number of characters stored, 0 for an empty line,
+// or ui8MaxLength + 1 if the line was too long and got truncated
+// (so ui8MaxLength must be below 255).
+//
+//===============================================================
+
+uint8_t
+UART_getLine(uint8_t * pui8Buffer, uint8_t ui8MaxLength)
+{
+	uint8_t ui8Length = 0;
+	bool bOverflow = false;
+	uint8_t ui8RxChar;
+
+	while(1)
+	{
+		while(!(IFG2 & UCA0RXIFG))				// wait for a character
+		{
+		}
+
+		ui8RxChar = UCA0RXBUF;
+
+		if ((ui8RxChar == '\r') || (ui8RxChar == '\n'))
+		{
+			return bOverflow ? ui8MaxLength + 1 : ui8Length;
+		}
+
+		if (ui8Length < ui8MaxLength)
+		{
+			pui8Buffer[ui8Length++] = ui8RxChar;
+		}
+		else
+		{
+			bOverflow = true;
+		}
+	}
+}
+
+//===============================================================
+//
 // UART_setup - Initialize UART
 //
 // Function will initialize UART GPIO's and registers for
@@ -278,6 +325,9 @@ UART_setup(void)							// uses USCI_A0
     P1SEL |= BIT2;						// P1.2=TXD
     // this is for TX only... (short TX & RX on the board P1.1 to P1.2)
     P1SEL2 |= BIT2;						// P1.2=TXD
+
+    P1SEL |= BIT1;						// P1.1=RXD, used by the Tilelink host commands
+    P1SEL2 |= BIT1;
 
     UCA0CTL1 |= UCSWRST;				// disable UART
 
