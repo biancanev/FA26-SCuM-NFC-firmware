@@ -167,6 +167,10 @@ void main(void)
 		ui8VLOCalibCount++;
 		if (ui8VLOCalibCount == 25)
 		{
+			// Let the UART finish sending the last reply first: the calibration
+			// drops SMCLK (the UART baud clock) to 1 MHz while it runs
+			while (UCA0STAT & UCBUSY);
+
 			// Calibrate VLO
 			MCU_calculateVLOFreq();
 			// Reset Calibration Counter

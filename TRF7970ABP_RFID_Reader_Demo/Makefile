@@ -41,11 +41,20 @@ size: $(BUILD)/$(TARGET).elf
 	$(SIZE) $<
 
 # Starts the TI GDB agent (talks to the LaunchPad's on-board debugger on port
-# 55000), loads the ELF into flash, resets the MCU, then stops the agent.
+# 55000), loads the ELF into flash, then resets and runs the MCU before
+# stopping the agent. A plain "detach" is not enough: the agent reconnects as
+# soon as gdb leaves, which halts the MCU, and it stays halted after the agent is
+# killed (no UART output until the board is power cycled). So a second gdb
+# leaves the target running ("continue") and is killed along with the agent.
 flash: $(BUILD)/$(TARGET).elf
 	$(AGENT) $(AGENT_CFG) & agent=$$!; sleep 3; \
-	$(GDB) -batch -ex "target remote :55000" -ex "load" -ex "monitor reset" -ex "detach" $<; \
-	status=$$?; kill $$agent; exit $$status
+	$(GDB) -batch -ex "target remote :55000" -ex "load" $<; status=$$?; \
+	if [ $$status -eq 0 ]; then \
+		$(GDB) -batch -ex "target remote :55000" -ex "monitor reset" -ex "continue" $< > $(BUILD)/run.log 2>&1 & gdb=$$!; \
+		for i in $$(seq 30); do grep -q "Continuing" $(BUILD)/run.log && break; sleep 1; done; \
+		cat $(BUILD)/run.log; sleep 1; kill $$gdb; \
+	fi; \
+	kill $$agent; exit $$status
 
 test:
 	python ../tests/host/run_tests.py
