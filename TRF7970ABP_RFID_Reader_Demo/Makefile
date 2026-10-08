@@ -3,6 +3,7 @@
 #   make          - compile + link  -> build/nfc_reader.elf / .hex
 #   make flash    - program the MSP430G2553 through the LaunchPad debugger
 #   make size     - show flash/RAM usage
+#   make test     - run the host tests in ../tests/host (PC gcc, no board needed)
 #   make clean
 
 GCC_DIR ?= C:/ti/msp430-gcc
@@ -46,7 +47,10 @@ flash: $(BUILD)/$(TARGET).elf
 	$(GDB) -batch -ex "target remote :55000" -ex "load" -ex "monitor reset" -ex "detach" $<; \
 	status=$$?; kill $$agent; exit $$status
 
+test:
+	python ../tests/host/run_tests.py
+
 clean:
 	rm -rf $(BUILD)
 
-.PHONY: all size flash clean
+.PHONY: all size flash test clean
