@@ -106,8 +106,48 @@ To compare with demodulator output:
 For example, `python tools/nfc_bitstream.py --bits-only test > expected.txt`, then `diff` it against the demodulator's output.
 
 **Notes**
-- **Bit order:** if the demodulator collects bits MSB first, every byte will look reversed.
+- **Bit order:** `--bits-only` prints bits the way the RTL decodes them (each byte MSB first). If you flip `TILELINK_MSB_FIRST`, flip `MSB_FIRST` in `tools/nfc_bitstream.py` too; `make test` checks they match.
 - **Writes over 8 bytes** are split into several packets, one line each.
 - **This is the ideal stream** from the ISO15693 spec, not a capture. It doesn't show timing jitter or 10% ASK depth.
+
+---
+
+## 6. Generate FPGA / RTL simulation inputs
+
+`tools/fpga_rx_waves.py` turns a packet into what the FPGA should see from the breadboard NFC front end, sampled at the ILA rate (35 MHz by default). It takes the same `test` / `write` / `read` / `raw` commands:
+
+| Signal | What it is |
+|---|---|
+| `fm_in` | demodulated envelope: `1` = carrier, `0` = pause |
+| `fm_clock` | 13.56 MHz clock recovered from the carrier |
+| `rx_clk` | `fm_clock` divided by 128 (105.9 kHz, one 9.44 µs slot per period) |
+
+| Output | Option |
+|---|---|
+| Graph of all three signals | `--plot` (add `--us 40:140` to zoom, `--save out.png` to save) |
+| One row per 35 MHz sample: `sample,t_ns,fm_in,fm_clock,rx_clk` | `--csv rx_input_samples.csv` |
+| Waveform for GTKWave / Vivado | `--vcd rx.vcd` |
+| One `0`/`1` per slot for the RTL testbench (see below) | `--rtl-csv rx_input.csv` |
+
+Generate everything for the wiki example packet in one go:
+
+```
+python tools/fpga_rx_waves.py --csv rx_input_samples.csv --vcd rx.vcd --rtl-csv rx_input.csv test
+```
+
+**RTL testbench file (`--rtl-csv`):** one line per 9.44 µs slot, no header, `0` where a pause starts and `1` otherwise. It starts right after the SOF and ends with the EOF plus 6 idle slots. For the wiki example the first 8 lines are `1 0 1 1 1 1 1 1` (the first symbol of byte `01`). It comes straight from the slot pattern, so `--fs`, `--gate-clock` and `--invert-fm-in` don't change it.
+
+**Options**
+- `--fs 50e6`: sample rate, if your ILA clock isn't 35 MHz.
+- `--div N`: `rx_clk` divider, if it isn't 128.
+- `--gate-clock`: stop `fm_clock` during pauses, as happens with 100% OOK when the carrier disappears.
+- `--invert-fm-in`: `fm_in` is `1` during pauses instead.
+- `--lead-us 0`: start the SOF at time 0 (default is 50 µs of carrier first), to line up with an ILA trigger on the first pause.
+- `--packet N`: which packet of a write longer than 8 bytes.
+
+**Notes**
+- **One packet at a time.** The full wiki example is about 293k samples at 35 MHz, likely more than the ILA holds; use `--us` to plot only the part you captured.
+- **`--us` only affects the plot.** The CSV and VCD always contain the whole packet.
+- **`fm_clock` looks uneven** in the CSV: at 35 MHz each 13.56 MHz period is only 2.58 samples, so its high time alternates between 1 and 2 samples.
 
 ---
