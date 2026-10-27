@@ -438,6 +438,7 @@ uint8_t NFC_appIso15693(void)
 //!
 //!   F 1 | F 0             RF field on / off                      -> OK
 //!   M 100 | M 10          100% OOK / 10% ASK modulation           -> OK
+//!   P <len>               Pause length, hex, 73.7 ns steps (0..FF) -> OK
 //!   T                     Send the wiki example write packet      -> OK | ERR
 //!   W <addr> <hex data>   Write data at addr (32 bit hex)         -> OK | ERR
 //!   R <addr> <len>        Read len (hex) bytes from addr          -> DATA | ERR
@@ -604,6 +605,18 @@ uint8_t NFC_appTilelink(void)
 		{
 			break;
 		}
+		UART_sendCString((uint8_t *) "OK");
+		UART_putNewLine();
+		return STATUS_SUCCESS;
+
+	case 'P':
+	case 'p':
+		ui8Index = parseHexNumber(1, ui8Length, &ui32ReadLength);
+		if ((ui8Index == 0) || (ui32ReadLength > 0xFF) || (skipSpaces(ui8Index, ui8Length) != ui8Length))
+		{
+			break;
+		}
+		Tilelink_setPulseLength((uint8_t) ui32ReadLength);
 		UART_sendCString((uint8_t *) "OK");
 		UART_putNewLine();
 		return STATUS_SUCCESS;

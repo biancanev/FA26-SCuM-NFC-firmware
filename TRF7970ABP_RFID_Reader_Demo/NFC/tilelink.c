@@ -20,6 +20,7 @@
 
 static bool g_bTilelinkFieldOn = false;
 static bool g_bTilelinkAsk10 = false;
+static uint8_t g_ui8TilelinkPulseLength = TILELINK_TX_PULSE_DEFAULT;
 
 //===============================================================
 //
@@ -34,6 +35,8 @@ static bool g_bTilelinkAsk10 = false;
 void Tilelink_fieldOn(void)
 {
 	TRF79xxA_setupInitiator(TILELINK_ISO_CONTROL);	// Resets the TRF, turns RF on, sets OOK 100%
+
+	TRF79xxA_writeRegister(TRF79XXA_TX_PULSE_LENGTH_CONTROL, g_ui8TilelinkPulseLength);	// Cleared by the ISO Control write
 
 	if (g_bTilelinkAsk10)
 	{
@@ -108,6 +111,24 @@ static uint8_t reversePairs(uint8_t ui8Byte)
 }
 
 #endif
+
+//===============================================================
+//
+// Tilelink_setPulseLength - Set the modulation pause length in steps of
+// 73.7 ns (0 = 9.44 us ISO15693 preset). Applied immediately if the
+// field is on. See TILELINK_TX_PULSE_DEFAULT.
+//
+//===============================================================
+
+void Tilelink_setPulseLength(uint8_t ui8PulseLength)
+{
+	g_ui8TilelinkPulseLength = ui8PulseLength;
+
+	if (g_bTilelinkFieldOn)
+	{
+		TRF79xxA_writeRegister(TRF79XXA_TX_PULSE_LENGTH_CONTROL, ui8PulseLength);
+	}
+}
 
 //===============================================================
 //

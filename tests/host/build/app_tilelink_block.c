@@ -157,6 +157,18 @@ uint8_t NFC_appTilelink(void)
 		UART_putNewLine();
 		return STATUS_SUCCESS;
 
+	case 'P':
+	case 'p':
+		ui8Index = parseHexNumber(1, ui8Length, &ui32ReadLength);
+		if ((ui8Index == 0) || (ui32ReadLength > 0xFF) || (skipSpaces(ui8Index, ui8Length) != ui8Length))
+		{
+			break;
+		}
+		Tilelink_setPulseLength((uint8_t) ui32ReadLength);
+		UART_sendCString((uint8_t *) "OK");
+		UART_putNewLine();
+		return STATUS_SUCCESS;
+
 	case 'T':
 	case 't':
 		// NFC Modem wiki example: cmd 01, addr 0x80000000, length 8, body 08..01, CRC 31 2C

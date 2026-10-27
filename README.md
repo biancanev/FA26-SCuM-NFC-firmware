@@ -62,12 +62,14 @@ python tools/tsi_host.py --port COM5 <command>
 | Send any packet you build yourself | `raw 01 0000008000000000 0800000000000000 0807060504030201` |
 | Turn the NFC field on or off | `field on` / `field off` |
 | Change the modulation | `mod 100` (default) / `mod 10` |
+| Change the pause length (µs) | `pulse 14.7` (default) / `pulse 0` (9.44 µs ISO15693 preset) |
 
 **Notes**
 - **Addresses and data are in hex.**
 - **`load` needs a raw `.bin` file.** To make one from an ELF, use your compiler's objcopy, for example `riscv64-unknown-elf-objcopy -O binary program.elf program.bin`.
 - **The NFC field turns on by itself** when you send the first packet. It stays on until you run `field off` or reset the board.
-- **`mod` stays set** until you reset the board.
+- **`mod` and `pulse` stay set** until you reset the board.
+- **`pulse` sets how long the TRF7970A holds each pause**, in 73.7 ns steps up to 18.8 µs. The breadboard demodulator shortens pauses by about 5.3 µs (9.44 µs sent showed up as ~4.1 µs on `fm_in`), so the default is 14.7 µs to give ~9.44 µs at `fm_in`. Measure `fm_in` on the ILA and adjust; keep it under ~17.7 µs, because pauses can start 18.88 µs apart. The compiled-in default is `TILELINK_TX_PULSE_DEFAULT` in `NFC/tilelink.h`.
 - **`read` is experimental.** The chip's replies may not be readable by this board yet. If you get `NO_RESPONSE_RECEIVED_15693`, the board heard nothing back.
 
 **Preview without a board:** add `--dry-run` to see the exact bytes that would be sent:

@@ -37,6 +37,16 @@
 // Keep in sync with MSB_FIRST in tools/nfc_bitstream.py.
 #define TILELINK_MSB_FIRST			1
 
+// Modulation pause length, TRF79xxA TX Pulse Length Control register (0x06),
+// in steps of 73.7 ns (1/13.56 MHz). 0 = protocol preset (9.44 us for
+// ISO15693). The breadboard demodulator's fm_in pauses measured ~4.1 us with
+// the 9.44 us preset (its envelope detector falls slowly and recovers fast,
+// losing ~5.3 us), so the pause is lengthened to 0xC8 = 14.74 us to give
+// ~9.44 us at fm_in. Keep it below ~0xF0: pauses start at least 18.88 us apart.
+// Changeable at runtime with the "P" command; the TRF79xxA clears the
+// register on every ISO Control write, so Tilelink_fieldOn() rewrites it.
+#define TILELINK_TX_PULSE_DEFAULT	0xC8
+
 // ISO15693, high bit rate, one subcarrier, 1 out of 4, RX CRC enabled
 #define TILELINK_ISO_CONTROL		0x02
 
@@ -65,6 +75,7 @@
 void Tilelink_fieldOn(void);
 void Tilelink_fieldOff(void);
 void Tilelink_setAsk10(bool bAsk10);
+void Tilelink_setPulseLength(uint8_t ui8PulseLength);
 bool Tilelink_isFieldOn(void);
 
 tTrfStatus Tilelink_sendRaw(uint8_t * pui8Frame, uint8_t ui8Length);

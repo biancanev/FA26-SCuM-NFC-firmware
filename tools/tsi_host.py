@@ -16,6 +16,7 @@ Examples:
     python tools/tsi_host.py --port COM5 read 0x80000000 8
     python tools/tsi_host.py --port COM5 raw 01 0000008000000000 0800000000000000 0807060504030201
     python tools/tsi_host.py --port COM5 mod 10
+    python tools/tsi_host.py --port COM5 pulse 14.7
     python tools/tsi_host.py --port COM5 field off
     python tools/tsi_host.py --dry-run test
 """
@@ -30,6 +31,7 @@ CMD_WRITE = 0x01
 FW_MAX_BODY = 8          # TILELINK_MAX_BODY in tilelink.h: body bytes per on-air packet
 LINE_MAX_DATA = 32       # data bytes per "W" line (firmware line buffer is 96 chars)
 RAW_MAX = 46             # bytes per "X" line
+PULSE_STEP_US = 1 / 13.56   # TRF79xxA TX Pulse Length Control step (73.7 ns)
 
 EXAMPLE_ADDR = 0x80000000
 EXAMPLE_BODY = bytes([8, 7, 6, 5, 4, 3, 2, 1])
@@ -171,6 +173,8 @@ def main():
     p.add_argument("data", nargs="+")
     p = sub.add_parser("mod", help="modulation: 100 (OOK, default) or 10 (ASK)")
     p.add_argument("depth", choices=["10", "100"])
+    p = sub.add_parser("pulse", help="modulation pause length in us (0 = 9.44 us ISO15693 preset)")
+    p.add_argument("us", type=float)
     p = sub.add_parser("field", help="RF field on/off")
     p.add_argument("state", choices=["on", "off"])
     args = parser.parse_args()
@@ -224,6 +228,13 @@ def main():
 
         elif args.action == "mod":
             print(board.command(f"M {args.depth}"))
+
+        elif args.action == "pulse":
+            steps = round(args.us / PULSE_STEP_US)
+            if not 0 <= steps <= 0xFF:
+                sys.exit(f"pulse must be 0..{0xFF * PULSE_STEP_US:.1f} us")
+            print(f"pause = {steps * PULSE_STEP_US:.2f} us" if steps else "pause = 9.44 us (ISO15693 preset)")
+            print(board.command(f"P {steps:02X}"))
 
         elif args.action == "field":
             print(board.command("F 1" if args.state == "on" else "F 0"))
