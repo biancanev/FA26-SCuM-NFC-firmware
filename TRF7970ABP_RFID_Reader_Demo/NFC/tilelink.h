@@ -26,6 +26,17 @@
 #define TILELINK_CMD_READ			0x00
 #define TILELINK_CMD_WRITE			0x01
 
+// Bit order on air. The TRF79xxA always sends each FIFO byte LSB first, as
+// four 1 out of 4 symbols (bit pairs b1b0, b3b2, b5b4, b7b6, symbol value =
+// the pair). The SCuM modem RTL expects each byte MSB first and decodes each
+// symbol's value high bit first, so it needs the pairs b7b6, b5b4, b3b2, b1b0.
+// When 1, the firmware computes the CRC itself (over the unchanged bytes,
+// appended little endian), reverses the order of the four bit pairs in every
+// byte including the CRC, and transmits without hardware CRC. When 0, frames
+// go out in standard ISO15693 order with the TRF79xxA's CRC.
+// Keep in sync with MSB_FIRST in tools/nfc_bitstream.py.
+#define TILELINK_MSB_FIRST			1
+
 // ISO15693, high bit rate, one subcarrier, 1 out of 4, RX CRC enabled
 #define TILELINK_ISO_CONTROL		0x02
 

@@ -1,0 +1,1619 @@
+Archive member included to satisfy reference by file (symbol)
+
+/Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(lib2divSI.o)
+                              build/Hardware/mcu.o (__mspabi_divul)
+/Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(epilogue.o)
+                              build/NFC/iso14443b.o (__mspabi_func_epilog_7)
+/Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(slli.o)
+                              build/NFC/iso15693.o (__mspabi_slli)
+/Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(srai.o)
+                              /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(lib2divSI.o) (__mspabi_sral)
+/Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(srli.o)
+                              build/Hardware/trf79xxa.o (__mspabi_srli)
+/Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(_udivdi3.o)
+                              /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(lib2divSI.o) (__mspabi_divull)
+/Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(_clzdi2.o)
+                              /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(_udivdi3.o) (__clzdi2)
+/Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(_clz.o)
+                              /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(_clzdi2.o) (__clz_tab)
+/Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libmul_none.a(mpy.o)
+                              build/Hardware/mcu.o (__mspabi_mpyi)
+/Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/../../../../msp430-elf/lib/430/libcrt.a(crt_bss.o)
+                              build/Hardware/VLO_Library_gcc.o (__crt0_init_bss)
+/Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/../../../../msp430-elf/lib/430/libcrt.a(crt_main.o)
+                              /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/../../../../msp430-elf/lib/430/crt0.o (__crt0_call_main)
+/Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/../../../../msp430-elf/lib/430/libc.a(lib_a-memset.o)
+                              /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/../../../../msp430-elf/lib/430/libcrt.a(crt_bss.o) (memset)
+
+Discarded input sections
+
+ .text          0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/../../../../msp430-elf/lib/430/crt0.o
+ .data          0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/../../../../msp430-elf/lib/430/crt0.o
+ .bss           0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/../../../../msp430-elf/lib/430/crt0.o
+ .text          0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/crtbegin_no_eh.o
+ .data          0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/crtbegin_no_eh.o
+ .bss           0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/crtbegin_no_eh.o
+ .comment       0x0000000000000000       0x3a /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/crtbegin_no_eh.o
+ .text          0x0000000000000000        0x0 build/main.o
+ .data          0x0000000000000000        0x0 build/main.o
+ .bss           0x0000000000000000        0x0 build/main.o
+ .text          0x0000000000000000        0x0 build/system_pre_init.o
+ .data          0x0000000000000000        0x0 build/system_pre_init.o
+ .bss           0x0000000000000000        0x0 build/system_pre_init.o
+ .text._system_pre_init
+                0x0000000000000000        0xa build/system_pre_init.o
+ .debug_frame   0x0000000000000000       0x24 build/system_pre_init.o
+ .debug_info    0x0000000000000000      0x54a build/system_pre_init.o
+ .debug_abbrev  0x0000000000000000       0x86 build/system_pre_init.o
+ .debug_aranges
+                0x0000000000000000       0x20 build/system_pre_init.o
+ .debug_ranges  0x0000000000000000       0x10 build/system_pre_init.o
+ .debug_line    0x0000000000000000       0x71 build/system_pre_init.o
+ .debug_str     0x0000000000000000      0x458 build/system_pre_init.o
+ .comment       0x0000000000000000       0x3a build/system_pre_init.o
+ .debug_line.text._system_pre_init
+                0x0000000000000000       0x35 build/system_pre_init.o
+ .debug_line_end
+                0x0000000000000000        0x0 build/system_pre_init.o
+ .text          0x0000000000000000        0x0 build/Hardware/VLO_Library_gcc.o
+ .data          0x0000000000000000        0x0 build/Hardware/VLO_Library_gcc.o
+ .bss           0x0000000000000000        0x0 build/Hardware/VLO_Library_gcc.o
+ .text          0x0000000000000000        0x0 build/Hardware/mcu.o
+ .data          0x0000000000000000        0x0 build/Hardware/mcu.o
+ .bss           0x0000000000000000        0x0 build/Hardware/mcu.o
+ .text          0x0000000000000000        0x0 build/Hardware/spi.o
+ .data          0x0000000000000000        0x0 build/Hardware/spi.o
+ .bss           0x0000000000000000        0x0 build/Hardware/spi.o
+ .text.SPI_writeCont
+                0x0000000000000000       0x36 build/Hardware/spi.o
+ .text.SPI_directMode
+                0x0000000000000000       0x22 build/Hardware/spi.o
+ .debug_line.text.SPI_writeCont
+                0x0000000000000000       0x7f build/Hardware/spi.o
+ .debug_line.text.SPI_directMode
+                0x0000000000000000       0x66 build/Hardware/spi.o
+ .text          0x0000000000000000        0x0 build/Hardware/trf79xxa.o
+ .data          0x0000000000000000        0x0 build/Hardware/trf79xxa.o
+ .bss           0x0000000000000000        0x0 build/Hardware/trf79xxa.o
+ .text.TRF79xxA_sendDirectCommand
+                0x0000000000000000        0x6 build/Hardware/trf79xxa.o
+ .text.TRF79xxA_readContinuous
+                0x0000000000000000        0x6 build/Hardware/trf79xxa.o
+ .text.TRF79xxA_writeContinuous
+                0x0000000000000000       0x2c build/Hardware/trf79xxa.o
+ .text.TRF79xxA_disableSlotCounter
+                0x0000000000000000       0x16 build/Hardware/trf79xxa.o
+ .text.TRF79xxA_enableSlotCounter
+                0x0000000000000000       0x16 build/Hardware/trf79xxa.o
+ .text.TRF79xxA_getTrfStatus
+                0x0000000000000000        0x6 build/Hardware/trf79xxa.o
+ .text.TRF79xxA_setTrfStatus
+                0x0000000000000000        0x6 build/Hardware/trf79xxa.o
+ .text.TRF79xxA_getCollisionPosition
+                0x0000000000000000        0x6 build/Hardware/trf79xxa.o
+ .text.TRF79xxA_setCollisionPosition
+                0x0000000000000000        0x6 build/Hardware/trf79xxa.o
+ .text.TRF79xxA_getIsoControlValue
+                0x0000000000000000        0x6 build/Hardware/trf79xxa.o
+ .text.TRF79xxA_checkExternalRfField
+                0x0000000000000000       0x38 build/Hardware/trf79xxa.o
+ .debug_line.text.TRF79xxA_sendDirectCommand
+                0x0000000000000000       0x24 build/Hardware/trf79xxa.o
+ .debug_line.text.TRF79xxA_readContinuous
+                0x0000000000000000       0x24 build/Hardware/trf79xxa.o
+ .debug_line.text.TRF79xxA_writeContinuous
+                0x0000000000000000       0xa0 build/Hardware/trf79xxa.o
+ .debug_line.text.TRF79xxA_disableSlotCounter
+                0x0000000000000000       0x42 build/Hardware/trf79xxa.o
+ .debug_line.text.TRF79xxA_enableSlotCounter
+                0x0000000000000000       0x42 build/Hardware/trf79xxa.o
+ .debug_line.text.TRF79xxA_getTrfStatus
+                0x0000000000000000       0x24 build/Hardware/trf79xxa.o
+ .debug_line.text.TRF79xxA_setTrfStatus
+                0x0000000000000000       0x2c build/Hardware/trf79xxa.o
+ .debug_line.text.TRF79xxA_getCollisionPosition
+                0x0000000000000000       0x24 build/Hardware/trf79xxa.o
+ .debug_line.text.TRF79xxA_setCollisionPosition
+                0x0000000000000000       0x2c build/Hardware/trf79xxa.o
+ .debug_line.text.TRF79xxA_getIsoControlValue
+                0x0000000000000000       0x24 build/Hardware/trf79xxa.o
+ .debug_line.text.TRF79xxA_checkExternalRfField
+                0x0000000000000000       0x6a build/Hardware/trf79xxa.o
+ .text          0x0000000000000000        0x0 build/Hardware/uart.o
+ .data          0x0000000000000000        0x0 build/Hardware/uart.o
+ .bss           0x0000000000000000        0x0 build/Hardware/uart.o
+ .text.UART_putSpace
+                0x0000000000000000        0xa build/Hardware/uart.o
+ .text.UART_response
+                0x0000000000000000       0x36 build/Hardware/uart.o
+ .text.UART_putBuffer
+                0x0000000000000000       0x20 build/Hardware/uart.o
+ .rodata.UART_putIntroReaderMsg.str1.1
+                0x0000000000000000       0xbd build/Hardware/uart.o
+ .text.UART_putIntroReaderMsg
+                0x0000000000000000       0x44 build/Hardware/uart.o
+ .text.UART_putByteDecimalValue
+                0x0000000000000000       0x5e build/Hardware/uart.o
+ .debug_line.text.UART_putSpace
+                0x0000000000000000       0x24 build/Hardware/uart.o
+ .debug_line.text.UART_response
+                0x0000000000000000       0x5e build/Hardware/uart.o
+ .debug_line.text.UART_putBuffer
+                0x0000000000000000       0x4a build/Hardware/uart.o
+ .debug_line.text.UART_putIntroReaderMsg
+                0x0000000000000000       0x66 build/Hardware/uart.o
+ .debug_line.text.UART_putByteDecimalValue
+                0x0000000000000000      0x126 build/Hardware/uart.o
+ .text          0x0000000000000000        0x0 build/NFC/felica.o
+ .data          0x0000000000000000        0x0 build/NFC/felica.o
+ .bss           0x0000000000000000        0x0 build/NFC/felica.o
+ .text.FeliCa_pollSingleSlot
+                0x0000000000000000       0x92 build/NFC/felica.o
+ .rodata.FeliCa_readSingleBlock.str1.1
+                0x0000000000000000       0x50 build/NFC/felica.o
+ .text.FeliCa_readSingleBlock
+                0x0000000000000000      0x172 build/NFC/felica.o
+ .text.FeliCa_readFourBlocks
+                0x0000000000000000      0x1bc build/NFC/felica.o
+ .rodata.FeliCa_putTagInformation.str1.1
+                0x0000000000000000      0x1b1 build/NFC/felica.o
+ .text.FeliCa_putTagInformation
+                0x0000000000000000      0x136 build/NFC/felica.o
+ .text.FeliCa_getNDEFLength
+                0x0000000000000000        0xa build/NFC/felica.o
+ .text.FeliCa_getIDm
+                0x0000000000000000        0x6 build/NFC/felica.o
+ .bss.g_sTrfStatus
+                0x0000000000000000        0x2 build/NFC/felica.o
+ .debug_line.text.FeliCa_pollSingleSlot
+                0x0000000000000000      0x1f7 build/NFC/felica.o
+ .debug_line.text.FeliCa_readSingleBlock
+                0x0000000000000000      0x313 build/NFC/felica.o
+ .debug_line.text.FeliCa_readFourBlocks
+                0x0000000000000000      0x3b9 build/NFC/felica.o
+ .debug_line.text.FeliCa_putTagInformation
+                0x0000000000000000      0x278 build/NFC/felica.o
+ .debug_line.text.FeliCa_getNDEFLength
+                0x0000000000000000       0x24 build/NFC/felica.o
+ .debug_line.text.FeliCa_getIDm
+                0x0000000000000000       0x24 build/NFC/felica.o
+ .text          0x0000000000000000        0x0 build/NFC/iso14443a.o
+ .data          0x0000000000000000        0x0 build/NFC/iso14443a.o
+ .bss           0x0000000000000000        0x0 build/NFC/iso14443a.o
+ .text.ISO14443A_sendPollCmd
+                0x0000000000000000       0x60 build/NFC/iso14443a.o
+ .text.ISO14443A_sendAnticollisionCmd
+                0x0000000000000000       0xfc build/NFC/iso14443a.o
+ .text.ISO14443A_sendSelectCmd
+                0x0000000000000000       0xce build/NFC/iso14443a.o
+ .rodata.ISO14443A_sendHalt.str1.1
+                0x0000000000000000       0x15 build/NFC/iso14443a.o
+ .text.ISO14443A_sendHalt
+                0x0000000000000000       0x80 build/NFC/iso14443a.o
+ .rodata.ISO14443A_sendRATS.str1.1
+                0x0000000000000000       0x10 build/NFC/iso14443a.o
+ .text.ISO14443A_sendRATS
+                0x0000000000000000       0x9c build/NFC/iso14443a.o
+ .rodata.ISO14443A_sendPPS.str1.1
+                0x0000000000000000       0x4d build/NFC/iso14443a.o
+ .text.ISO14443A_sendPPS
+                0x0000000000000000       0xba build/NFC/iso14443a.o
+ .text.ISO14443A_storeUID
+                0x0000000000000000       0xb4 build/NFC/iso14443a.o
+ .text.ISO14443A_runAnticollision
+                0x0000000000000000      0x1b4 build/NFC/iso14443a.o
+ .rodata.ISO14443A_selectTag.str1.1
+                0x0000000000000000       0x64 build/NFC/iso14443a.o
+ .text.ISO14443A_selectTag
+                0x0000000000000000      0x1dc build/NFC/iso14443a.o
+ .rodata.ISO14443A_sendT2TReadFourBlocks.str1.1
+                0x0000000000000000       0x16 build/NFC/iso14443a.o
+ .text.ISO14443A_sendT2TReadFourBlocks
+                0x0000000000000000       0xc4 build/NFC/iso14443a.o
+ .rodata.ISO14443A_sendT2TWriteSingleBlock.str1.1
+                0x0000000000000000       0x42 build/NFC/iso14443a.o
+ .text.ISO14443A_sendT2TWriteSingleBlock
+                0x0000000000000000      0x104 build/NFC/iso14443a.o
+ .text.ISO14443A_getType4ACompliance
+                0x0000000000000000        0x6 build/NFC/iso14443a.o
+ .text.ISO14443A_setRecursionCount
+                0x0000000000000000        0x6 build/NFC/iso14443a.o
+ .text.ISO14443A_getUid
+                0x0000000000000000        0x6 build/NFC/iso14443a.o
+ .text.ISO14443A_getUidSize
+                0x0000000000000000        0x6 build/NFC/iso14443a.o
+ .bss.g_sTrfStatus
+                0x0000000000000000        0x2 build/NFC/iso14443a.o
+ .debug_line.text.ISO14443A_sendPollCmd
+                0x0000000000000000       0xf8 build/NFC/iso14443a.o
+ .debug_line.text.ISO14443A_sendAnticollisionCmd
+                0x0000000000000000      0x2a1 build/NFC/iso14443a.o
+ .debug_line.text.ISO14443A_sendSelectCmd
+                0x0000000000000000      0x224 build/NFC/iso14443a.o
+ .debug_line.text.ISO14443A_sendHalt
+                0x0000000000000000      0x138 build/NFC/iso14443a.o
+ .debug_line.text.ISO14443A_sendRATS
+                0x0000000000000000      0x1a7 build/NFC/iso14443a.o
+ .debug_line.text.ISO14443A_sendPPS
+                0x0000000000000000      0x1b0 build/NFC/iso14443a.o
+ .debug_line.text.ISO14443A_storeUID
+                0x0000000000000000      0x222 build/NFC/iso14443a.o
+ .debug_line.text.ISO14443A_runAnticollision
+                0x0000000000000000      0x4f2 build/NFC/iso14443a.o
+ .debug_line.text.ISO14443A_selectTag
+                0x0000000000000000      0x595 build/NFC/iso14443a.o
+ .debug_line.text.ISO14443A_sendT2TReadFourBlocks
+                0x0000000000000000      0x1cf build/NFC/iso14443a.o
+ .debug_line.text.ISO14443A_sendT2TWriteSingleBlock
+                0x0000000000000000      0x229 build/NFC/iso14443a.o
+ .debug_line.text.ISO14443A_getType4ACompliance
+                0x0000000000000000       0x24 build/NFC/iso14443a.o
+ .debug_line.text.ISO14443A_setRecursionCount
+                0x0000000000000000       0x2c build/NFC/iso14443a.o
+ .debug_line.text.ISO14443A_getUid
+                0x0000000000000000       0x24 build/NFC/iso14443a.o
+ .debug_line.text.ISO14443A_getUidSize
+                0x0000000000000000       0x24 build/NFC/iso14443a.o
+ .text          0x0000000000000000        0x0 build/NFC/iso14443b.o
+ .data          0x0000000000000000        0x0 build/NFC/iso14443b.o
+ .bss           0x0000000000000000        0x0 build/NFC/iso14443b.o
+ .rodata.ISO14443B_sendPollCmd.str1.1
+                0x0000000000000000       0x11 build/NFC/iso14443b.o
+ .text.ISO14443B_sendPollCmd
+                0x0000000000000000       0xca build/NFC/iso14443b.o
+ .text.ISO14443B_sendSlotMarker
+                0x0000000000000000       0xb8 build/NFC/iso14443b.o
+ .text.ISO14443B_runAnticollision
+                0x0000000000000000       0xde build/NFC/iso14443b.o
+ .rodata.ISO14443B_sendAttrib.str1.1
+                0x0000000000000000       0x12 build/NFC/iso14443b.o
+ .text.ISO14443B_sendAttrib
+                0x0000000000000000       0x92 build/NFC/iso14443b.o
+ .rodata.ISO14443B_sendHalt.str1.1
+                0x0000000000000000       0x15 build/NFC/iso14443b.o
+ .text.ISO14443B_sendHalt
+                0x0000000000000000       0x80 build/NFC/iso14443b.o
+ .text.ISO14443B_getType4BCompliance
+                0x0000000000000000        0x6 build/NFC/iso14443b.o
+ .text.ISO14443B_getPUPI
+                0x0000000000000000        0x6 build/NFC/iso14443b.o
+ .rodata.CSWTCH.63
+                0x0000000000000000        0x5 build/NFC/iso14443b.o
+ .bss.g_sTrfStatus
+                0x0000000000000000        0x2 build/NFC/iso14443b.o
+ .debug_line.text.ISO14443B_sendPollCmd
+                0x0000000000000000      0x286 build/NFC/iso14443b.o
+ .debug_line.text.ISO14443B_sendSlotMarker
+                0x0000000000000000      0x282 build/NFC/iso14443b.o
+ .debug_line.text.ISO14443B_runAnticollision
+                0x0000000000000000      0x1e7 build/NFC/iso14443b.o
+ .debug_line.text.ISO14443B_sendAttrib
+                0x0000000000000000      0x1b0 build/NFC/iso14443b.o
+ .debug_line.text.ISO14443B_sendHalt
+                0x0000000000000000      0x14c build/NFC/iso14443b.o
+ .debug_line.text.ISO14443B_getType4BCompliance
+                0x0000000000000000       0x24 build/NFC/iso14443b.o
+ .debug_line.text.ISO14443B_getPUPI
+                0x0000000000000000       0x24 build/NFC/iso14443b.o
+ .text          0x0000000000000000        0x0 build/NFC/iso15693.o
+ .data          0x0000000000000000        0x0 build/NFC/iso15693.o
+ .bss           0x0000000000000000        0x0 build/NFC/iso15693.o
+ .rodata.ISO15693_sendSingleSlotInventory.str1.1
+                0x0000000000000000        0xf build/NFC/iso15693.o
+ .text.ISO15693_sendSingleSlotInventory
+                0x0000000000000000       0xb6 build/NFC/iso15693.o
+ .rodata.ISO15693_runAnticollision.str1.1
+                0x0000000000000000       0x41 build/NFC/iso15693.o
+ .text.ISO15693_runAnticollision
+                0x0000000000000000      0x2e8 build/NFC/iso15693.o
+ .rodata.ISO15693_sendGetSystemInfo.str1.1
+                0x0000000000000000       0x14 build/NFC/iso15693.o
+ .text.ISO15693_sendGetSystemInfo
+                0x0000000000000000      0x136 build/NFC/iso15693.o
+ .text.ISO15693_sendGetSystemInfoExtended
+                0x0000000000000000      0x130 build/NFC/iso15693.o
+ .rodata.ISO15693_sendReadSingleBlock.str1.1
+                0x0000000000000000       0x2c build/NFC/iso15693.o
+ .text.ISO15693_sendReadSingleBlock
+                0x0000000000000000      0x12c build/NFC/iso15693.o
+ .text.ISO15693_sendReadMultipleBlocks
+                0x0000000000000000      0x194 build/NFC/iso15693.o
+ .text.ISO15693_sendReadSingleBlockExtended
+                0x0000000000000000      0x154 build/NFC/iso15693.o
+ .text.ISO15693_sendWriteSingleBlock
+                0x0000000000000000      0x144 build/NFC/iso15693.o
+ .text.ISO15693_getUid
+                0x0000000000000000        0x6 build/NFC/iso15693.o
+ .text.ISO15693_getTagCount
+                0x0000000000000000        0x6 build/NFC/iso15693.o
+ .text.ISO15693_resetTagCount
+                0x0000000000000000        0x6 build/NFC/iso15693.o
+ .text.ISO15693_resetRecursionCount
+                0x0000000000000000        0x6 build/NFC/iso15693.o
+ .bss.g_sTrfStatus
+                0x0000000000000000        0x2 build/NFC/iso15693.o
+ .debug_line.text.ISO15693_sendSingleSlotInventory
+                0x0000000000000000      0x201 build/NFC/iso15693.o
+ .debug_line.text.ISO15693_runAnticollision
+                0x0000000000000000      0x6ab build/NFC/iso15693.o
+ .debug_line.text.ISO15693_sendGetSystemInfo
+                0x0000000000000000      0x30b build/NFC/iso15693.o
+ .debug_line.text.ISO15693_sendGetSystemInfoExtended
+                0x0000000000000000      0x2c6 build/NFC/iso15693.o
+ .debug_line.text.ISO15693_sendReadSingleBlock
+                0x0000000000000000      0x2cc build/NFC/iso15693.o
+ .debug_line.text.ISO15693_sendReadMultipleBlocks
+                0x0000000000000000      0x3bd build/NFC/iso15693.o
+ .debug_line.text.ISO15693_sendReadSingleBlockExtended
+                0x0000000000000000      0x2fa build/NFC/iso15693.o
+ .debug_line.text.ISO15693_sendWriteSingleBlock
+                0x0000000000000000      0x30a build/NFC/iso15693.o
+ .debug_line.text.ISO15693_getUid
+                0x0000000000000000       0x24 build/NFC/iso15693.o
+ .debug_line.text.ISO15693_getTagCount
+                0x0000000000000000       0x24 build/NFC/iso15693.o
+ .debug_line.text.ISO15693_resetTagCount
+                0x0000000000000000       0x2c build/NFC/iso15693.o
+ .debug_line.text.ISO15693_resetRecursionCount
+                0x0000000000000000       0x2c build/NFC/iso15693.o
+ .text          0x0000000000000000        0x0 build/NFC/ndef.o
+ .data          0x0000000000000000        0x0 build/NFC/ndef.o
+ .bss           0x0000000000000000        0x0 build/NFC/ndef.o
+ .text.NDEF_selectCapabilityContainer.part.0
+                0x0000000000000000       0x40 build/NFC/ndef.o
+ .text.NDEF_selectApplication
+                0x0000000000000000       0xcc build/NFC/ndef.o
+ .text.NDEF_selectCapabilityContainer
+                0x0000000000000000       0x7a build/NFC/ndef.o
+ .text.NDEF_selectFile
+                0x0000000000000000       0x82 build/NFC/ndef.o
+ .text.NDEF_readBinary
+                0x0000000000000000       0x9c build/NFC/ndef.o
+ .text.NDEF_readCapabilityContainer
+                0x0000000000000000       0x32 build/NFC/ndef.o
+ .rodata.NDEF_readApplication.str1.1
+                0x0000000000000000       0x66 build/NFC/ndef.o
+ .text.NDEF_readApplication
+                0x0000000000000000       0xdc build/NFC/ndef.o
+ .text.NDEF_updateBinaryLength
+                0x0000000000000000       0x7a build/NFC/ndef.o
+ .rodata.NDEF_updateBinaryText.str1.1
+                0x0000000000000000       0x1a build/NFC/ndef.o
+ .text.NDEF_updateBinaryText
+                0x0000000000000000      0x120 build/NFC/ndef.o
+ .text.NDEF_updateBinaryURI
+                0x0000000000000000       0xe4 build/NFC/ndef.o
+ .bss.g_sTrfStatus
+                0x0000000000000000        0x2 build/NFC/ndef.o
+ .debug_line.text.NDEF_selectCapabilityContainer.part.0
+                0x0000000000000000       0x86 build/NFC/ndef.o
+ .debug_line.text.NDEF_selectApplication
+                0x0000000000000000      0x226 build/NFC/ndef.o
+ .debug_line.text.NDEF_selectCapabilityContainer
+                0x0000000000000000      0x15c build/NFC/ndef.o
+ .debug_line.text.NDEF_selectFile
+                0x0000000000000000      0x164 build/NFC/ndef.o
+ .debug_line.text.NDEF_readBinary
+                0x0000000000000000      0x18c build/NFC/ndef.o
+ .debug_line.text.NDEF_readCapabilityContainer
+                0x0000000000000000       0x78 build/NFC/ndef.o
+ .debug_line.text.NDEF_readApplication
+                0x0000000000000000      0x220 build/NFC/ndef.o
+ .debug_line.text.NDEF_updateBinaryLength
+                0x0000000000000000      0x156 build/NFC/ndef.o
+ .debug_line.text.NDEF_updateBinaryText
+                0x0000000000000000      0x30a build/NFC/ndef.o
+ .debug_line.text.NDEF_updateBinaryURI
+                0x0000000000000000      0x256 build/NFC/ndef.o
+ .text          0x0000000000000000        0x0 build/NFC/nfc_app.o
+ .data          0x0000000000000000        0x0 build/NFC/nfc_app.o
+ .bss           0x0000000000000000        0x0 build/NFC/nfc_app.o
+ .text.NFC_appIso14443aType4NDEF
+                0x0000000000000000       0x4e build/NFC/nfc_app.o
+ .rodata.NFC_appIso14443aType2.str1.1
+                0x0000000000000000       0x1a build/NFC/nfc_app.o
+ .text.NFC_appIso14443aType2
+                0x0000000000000000       0x50 build/NFC/nfc_app.o
+ .text.NFC_appIso14443a
+                0x0000000000000000       0x5a build/NFC/nfc_app.o
+ .text.NFC_appIso14443b
+                0x0000000000000000       0x60 build/NFC/nfc_app.o
+ .text.NFC_appIso15693ReadTag
+                0x0000000000000000       0x3e build/NFC/nfc_app.o
+ .rodata.NFC_appIso15693.str1.1
+                0x0000000000000000       0x5c build/NFC/nfc_app.o
+ .text.NFC_appIso15693
+                0x0000000000000000       0xaa build/NFC/nfc_app.o
+ .text.NFC_appIso15693ReadExtendedTag
+                0x0000000000000000       0x3e build/NFC/nfc_app.o
+ .text.NFC_appFeliCa
+                0x0000000000000000       0x56 build/NFC/nfc_app.o
+ .text.NFC_findTag
+                0x0000000000000000       0x2a build/NFC/nfc_app.o
+ .debug_line.text.NFC_appIso14443aType4NDEF
+                0x0000000000000000       0xb2 build/NFC/nfc_app.o
+ .debug_line.text.NFC_appIso14443aType2
+                0x0000000000000000       0xb8 build/NFC/nfc_app.o
+ .debug_line.text.NFC_appIso14443a
+                0x0000000000000000       0xb9 build/NFC/nfc_app.o
+ .debug_line.text.NFC_appIso14443b
+                0x0000000000000000       0xfe build/NFC/nfc_app.o
+ .debug_line.text.NFC_appIso15693ReadTag
+                0x0000000000000000       0xce build/NFC/nfc_app.o
+ .debug_line.text.NFC_appIso15693
+                0x0000000000000000      0x143 build/NFC/nfc_app.o
+ .debug_line.text.NFC_appIso15693ReadExtendedTag
+                0x0000000000000000       0xd8 build/NFC/nfc_app.o
+ .debug_line.text.NFC_appFeliCa
+                0x0000000000000000       0xc7 build/NFC/nfc_app.o
+ .debug_line.text.NFC_findTag
+                0x0000000000000000       0x70 build/NFC/nfc_app.o
+ .text          0x0000000000000000        0x0 build/NFC/tilelink.o
+ .data          0x0000000000000000        0x0 build/NFC/tilelink.o
+ .bss           0x0000000000000000        0x0 build/NFC/tilelink.o
+ .text.Tilelink_isFieldOn
+                0x0000000000000000        0x6 build/NFC/tilelink.o
+ .debug_line.text.Tilelink_isFieldOn
+                0x0000000000000000       0x23 build/NFC/tilelink.o
+ .text          0x0000000000000000        0x4 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(lib2divSI.o)
+ .data          0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(lib2divSI.o)
+ .bss           0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(lib2divSI.o)
+ .text.__modsi3
+                0x0000000000000000       0x62 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(lib2divSI.o)
+ .text.__umodsi3
+                0x0000000000000000        0xe /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(lib2divSI.o)
+ .data          0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(epilogue.o)
+ .bss           0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(epilogue.o)
+ .text          0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(slli.o)
+ .data          0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(slli.o)
+ .bss           0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(slli.o)
+ .text.__mspabi_slli_n
+                0x0000000000000000       0x20 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(slli.o)
+ .text.__mspabi_slli
+                0x0000000000000000        0xa /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(slli.o)
+ .text.__mspabi_slll_n
+                0x0000000000000000       0x3e /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(slli.o)
+ .text.__mspabi_sllll
+                0x0000000000000000       0x1e /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(slli.o)
+ .text          0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(srai.o)
+ .data          0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(srai.o)
+ .bss           0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(srai.o)
+ .text.__mspabi_srai_n
+                0x0000000000000000       0x20 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(srai.o)
+ .text.__mspabi_srai
+                0x0000000000000000        0xa /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(srai.o)
+ .text.__mspabi_sral_n
+                0x0000000000000000       0x3e /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(srai.o)
+ .text.__mspabi_sral
+                0x0000000000000000        0xc /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(srai.o)
+ .text.__mspabi_srall
+                0x0000000000000000       0x1e /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(srai.o)
+ .text          0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(srli.o)
+ .data          0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(srli.o)
+ .bss           0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(srli.o)
+ .text.__mspabi_srli_n
+                0x0000000000000000       0x3e /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(srli.o)
+ .text.__mspabi_srli
+                0x0000000000000000        0xc /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(srli.o)
+ .text.__mspabi_srll_n
+                0x0000000000000000       0x5c /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(srli.o)
+ .text.__mspabi_srlll
+                0x0000000000000000       0x20 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(srli.o)
+ .text          0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(_udivdi3.o)
+ .data          0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(_udivdi3.o)
+ .bss           0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(_udivdi3.o)
+ .text.__udivdi3
+                0x0000000000000000      0x404 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(_udivdi3.o)
+ .text          0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(_clzdi2.o)
+ .data          0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(_clzdi2.o)
+ .bss           0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(_clzdi2.o)
+ .text.__clzdi2
+                0x0000000000000000       0x64 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(_clzdi2.o)
+ .comment       0x0000000000000000       0x3a /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(_clzdi2.o)
+ .text          0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(_clz.o)
+ .data          0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(_clz.o)
+ .bss           0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(_clz.o)
+ .rodata.__clz_tab
+                0x0000000000000000      0x100 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(_clz.o)
+ .comment       0x0000000000000000       0x3a /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(_clz.o)
+ .text          0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libmul_none.a(mpy.o)
+ .data          0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libmul_none.a(mpy.o)
+ .bss           0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libmul_none.a(mpy.o)
+ .text          0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/../../../../msp430-elf/lib/430/libcrt.a(crt_bss.o)
+ .data          0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/../../../../msp430-elf/lib/430/libcrt.a(crt_bss.o)
+ .bss           0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/../../../../msp430-elf/lib/430/libcrt.a(crt_bss.o)
+ .text          0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/../../../../msp430-elf/lib/430/libcrt.a(crt_main.o)
+ .data          0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/../../../../msp430-elf/lib/430/libcrt.a(crt_main.o)
+ .bss           0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/../../../../msp430-elf/lib/430/libcrt.a(crt_main.o)
+ .text          0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/../../../../msp430-elf/lib/430/libc.a(lib_a-memset.o)
+ .data          0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/../../../../msp430-elf/lib/430/libc.a(lib_a-memset.o)
+ .bss           0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/../../../../msp430-elf/lib/430/libc.a(lib_a-memset.o)
+ .text          0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/crtend_no_eh.o
+ .data          0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/crtend_no_eh.o
+ .bss           0x0000000000000000        0x0 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/crtend_no_eh.o
+ .comment       0x0000000000000000       0x3a /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/crtend_no_eh.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+SFR              0x0000000000000000 0x0000000000000010
+RAM              0x0000000000000200 0x0000000000000200
+INFOMEM          0x0000000000001000 0x0000000000000100
+INFOA            0x00000000000010c0 0x0000000000000040
+INFOB            0x0000000000001080 0x0000000000000040
+INFOC            0x0000000000001040 0x0000000000000040
+INFOD            0x0000000000001000 0x0000000000000040
+ROM              0x000000000000c000 0x0000000000003fde xr
+BSLSIGNATURE     0x000000000000ffde 0x0000000000000002
+VECT1            0x000000000000ffe0 0x0000000000000002
+VECT2            0x000000000000ffe2 0x0000000000000002
+VECT3            0x000000000000ffe4 0x0000000000000002
+VECT4            0x000000000000ffe6 0x0000000000000002
+VECT5            0x000000000000ffe8 0x0000000000000002
+VECT6            0x000000000000ffea 0x0000000000000002
+VECT7            0x000000000000ffec 0x0000000000000002
+VECT8            0x000000000000ffee 0x0000000000000002
+VECT9            0x000000000000fff0 0x0000000000000002
+VECT10           0x000000000000fff2 0x0000000000000002
+VECT11           0x000000000000fff4 0x0000000000000002
+VECT12           0x000000000000fff6 0x0000000000000002
+VECT13           0x000000000000fff8 0x0000000000000002
+VECT14           0x000000000000fffa 0x0000000000000002
+VECT15           0x000000000000fffc 0x0000000000000002
+RESETVEC         0x000000000000fffe 0x0000000000000002
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/../../../../msp430-elf/lib/430/crt0.o
+LOAD /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/crtbegin_no_eh.o
+LOAD build/main.o
+LOAD build/system_pre_init.o
+LOAD build/Hardware/VLO_Library_gcc.o
+LOAD build/Hardware/mcu.o
+LOAD build/Hardware/spi.o
+LOAD build/Hardware/trf79xxa.o
+LOAD build/Hardware/uart.o
+LOAD build/NFC/felica.o
+LOAD build/NFC/iso14443a.o
+LOAD build/NFC/iso14443b.o
+LOAD build/NFC/iso15693.o
+LOAD build/NFC/ndef.o
+LOAD build/NFC/nfc_app.o
+LOAD build/NFC/tilelink.o
+LOAD /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a
+START GROUP
+LOAD /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libmul_none.a
+LOAD /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/../../../../msp430-elf/lib/430/libc.a
+LOAD /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a
+LOAD /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/../../../../msp430-elf/lib/430/libcrt.a
+LOAD /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/../../../../msp430-elf/lib/430/libnosys.a
+END GROUP
+
+.bslsignature
+
+__interrupt_vector_1
+ *(__interrupt_vector_1)
+ *(__interrupt_vector_trapint)
+
+__interrupt_vector_2
+ *(__interrupt_vector_2)
+
+__interrupt_vector_3
+ *(__interrupt_vector_3)
+ *(__interrupt_vector_port1)
+
+__interrupt_vector_4
+                0x000000000000ffe6        0x2
+ *(__interrupt_vector_4)
+ __interrupt_vector_4
+                0x000000000000ffe6        0x2 build/Hardware/trf79xxa.o
+ *(__interrupt_vector_port2)
+
+__interrupt_vector_5
+ *(__interrupt_vector_5)
+
+__interrupt_vector_6
+ *(__interrupt_vector_6)
+ *(__interrupt_vector_adc10)
+
+__interrupt_vector_7
+ *(__interrupt_vector_7)
+ *(__interrupt_vector_usciab0tx)
+
+__interrupt_vector_8
+ *(__interrupt_vector_8)
+ *(__interrupt_vector_usciab0rx)
+
+__interrupt_vector_9
+ *(__interrupt_vector_9)
+ *(__interrupt_vector_timer0_a1)
+
+__interrupt_vector_10
+                0x000000000000fff2        0x2
+ *(__interrupt_vector_10)
+ __interrupt_vector_10
+                0x000000000000fff2        0x2 build/Hardware/trf79xxa.o
+ *(__interrupt_vector_timer0_a0)
+
+__interrupt_vector_11
+ *(__interrupt_vector_11)
+ *(__interrupt_vector_wdt)
+
+__interrupt_vector_12
+ *(__interrupt_vector_12)
+ *(__interrupt_vector_comparatora)
+
+__interrupt_vector_13
+ *(__interrupt_vector_13)
+ *(__interrupt_vector_timer1_a1)
+
+__interrupt_vector_14
+ *(__interrupt_vector_14)
+ *(__interrupt_vector_timer1_a0)
+
+__interrupt_vector_15
+ *(__interrupt_vector_15)
+ *(__interrupt_vector_nmi)
+
+__reset_vector  0x000000000000fffe        0x2
+ *(__interrupt_vector_16)
+ *(__interrupt_vector_reset)
+ *(.resetvec)
+ .resetvec      0x000000000000fffe        0x2 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/../../../../msp430-elf/lib/430/crt0.o
+
+.rodata         0x000000000000c000       0x2d
+                0x000000000000c000                . = ALIGN (0x2)
+ *(.plt)
+ *(.rodata .rodata.* .gnu.linkonce.r.* .const .const:*)
+ .rodata.main.str1.1
+                0x000000000000c000        0xf build/main.o
+ .rodata.putReply.str1.1
+                0x000000000000c00f        0xe build/NFC/nfc_app.o
+ .rodata.NFC_appTilelink.str1.1
+                0x000000000000c01d        0x8 build/NFC/nfc_app.o
+ .rodata.pui8ExampleBody.2895
+                0x000000000000c025        0x8 build/NFC/nfc_app.o
+ *(.rodata1)
+ *(.gcc_except_table)
+ *(.gcc_except_table.*)
+
+.rodata2        0x000000000000c02e       0x6e
+                0x000000000000c02e                . = ALIGN (0x2)
+                [!provide]                        PROVIDE (__preinit_array_start = .)
+ *(.preinit_array)
+                [!provide]                        PROVIDE (__preinit_array_end = .)
+                0x000000000000c02e                . = ALIGN (0x2)
+                [!provide]                        PROVIDE (__init_array_start = .)
+ *(SORT_BY_NAME(.init_array.*))
+ *(.init_array)
+                [!provide]                        PROVIDE (__init_array_end = .)
+                0x000000000000c02e                . = ALIGN (0x2)
+                [!provide]                        PROVIDE (__fini_array_start = .)
+ *(.fini_array)
+ *(SORT_BY_NAME(.fini_array.*))
+                [!provide]                        PROVIDE (__fini_array_end = .)
+                0x000000000000c02e                . = ALIGN (0x2)
+ *(.eh_frame_hdr)
+ *(.eh_frame)
+ .eh_frame      0x000000000000c02e       0x6e /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(_udivdi3.o)
+ *crtbegin*.o(.ctors)
+ *(EXCLUDE_FILE(*crtend*.o) .ctors)
+ *(SORT_BY_NAME(.ctors.*))
+ *(.ctors)
+ *crtbegin*.o(.dtors)
+ *(EXCLUDE_FILE(*crtend*.o) .dtors)
+ *(SORT_BY_NAME(.dtors.*))
+ *(.dtors)
+
+.text           0x000000000000c09c     0x1334
+                0x000000000000c09c                . = ALIGN (0x2)
+                0x000000000000c09c                PROVIDE (_start = .)
+ *(SORT_BY_NAME(.crt_*))
+ .crt_0000start
+                0x000000000000c09c        0x4 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/../../../../msp430-elf/lib/430/crt0.o
+                0x000000000000c09c                __crt0_start
+ .crt_0100init_bss
+                0x000000000000c0a0        0xe /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/../../../../msp430-elf/lib/430/libcrt.a(crt_bss.o)
+                0x000000000000c0a0                __crt0_init_bss
+ .crt_0800call_main
+                0x000000000000c0ae        0x6 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/../../../../msp430-elf/lib/430/libcrt.a(crt_main.o)
+                0x000000000000c0ae                __crt0_call_main
+ *(.lowtext .text .stub .text.* .gnu.linkonce.t.* .text:*)
+ .text.startup.main
+                0x000000000000c0b4       0x7e build/main.o
+                0x000000000000c0b4                main
+ .text.TI_measureVLO
+                0x000000000000c132       0x90 build/Hardware/VLO_Library_gcc.o
+                0x000000000000c132                TI_measureVLO
+ .text.MCU_setCounter
+                0x000000000000c1c2       0x38 build/Hardware/mcu.o
+                0x000000000000c1c2                MCU_setCounter
+ .text.MCU_delayMillisecond
+                0x000000000000c1fa       0x1e build/Hardware/mcu.o
+                0x000000000000c1fa                MCU_delayMillisecond
+ .text.MCU_initClock
+                0x000000000000c218       0x40 build/Hardware/mcu.o
+                0x000000000000c218                MCU_initClock
+ .text.MCU_calculateVLOFreq
+                0x000000000000c258       0x2a build/Hardware/mcu.o
+                0x000000000000c258                MCU_calculateVLOFreq
+ .text.SPI_receiveByte
+                0x000000000000c282       0x10 build/Hardware/spi.o
+                0x000000000000c282                SPI_receiveByte
+ .text.SPI_sendByte
+                0x000000000000c292        0xc build/Hardware/spi.o
+                0x000000000000c292                SPI_sendByte
+ .text.SPI_directCommand
+                0x000000000000c29e       0x16 build/Hardware/spi.o
+                0x000000000000c29e                SPI_directCommand
+ .text.SPI_rawWrite
+                0x000000000000c2b4       0x3e build/Hardware/spi.o
+                0x000000000000c2b4                SPI_rawWrite
+ .text.SPI_readCont
+                0x000000000000c2f2       0x42 build/Hardware/spi.o
+                0x000000000000c2f2                SPI_readCont
+ .text.SPI_readSingle
+                0x000000000000c334       0x2a build/Hardware/spi.o
+                0x000000000000c334                SPI_readSingle
+ .text.SPI_usciSet
+                0x000000000000c35e       0x32 build/Hardware/spi.o
+                0x000000000000c35e                SPI_usciSet
+ .text.SPI_writeSingle
+                0x000000000000c390       0x28 build/Hardware/spi.o
+                0x000000000000c390                SPI_writeSingle
+ .text.SPI_setup
+                0x000000000000c3b8       0x22 build/Hardware/spi.o
+                0x000000000000c3b8                SPI_setup
+ .text.TRF79xxA_resetFIFO
+                0x000000000000c3da        0xa build/Hardware/trf79xxa.o
+                0x000000000000c3da                TRF79xxA_resetFIFO
+ .text.TRF79xxA_readIrqStatus
+                0x000000000000c3e4       0x14 build/Hardware/trf79xxa.o
+                0x000000000000c3e4                TRF79xxA_readIrqStatus
+ .text.TRF79xxA_readRegister
+                0x000000000000c3f8       0x16 build/Hardware/trf79xxa.o
+                0x000000000000c3f8                TRF79xxA_readRegister
+ .text.TRF79xxA_writeRaw
+                0x000000000000c40e       0xba build/Hardware/trf79xxa.o
+                0x000000000000c40e                TRF79xxA_writeRaw
+ .text.TRF79xxA_resetIrqStatus
+                0x000000000000c4c8       0x1a build/Hardware/trf79xxa.o
+                0x000000000000c4c8                TRF79xxA_resetIrqStatus
+ .text.TRF79xxA_writeRegister
+                0x000000000000c4e2       0x3e build/Hardware/trf79xxa.o
+                0x000000000000c4e2                TRF79xxA_writeRegister
+ .text.TRF79xxA_initialSettings
+                0x000000000000c520       0x7e build/Hardware/trf79xxa.o
+                0x000000000000c520                TRF79xxA_initialSettings
+ .text.TRF79xxA_reset
+                0x000000000000c59e       0x4a build/Hardware/trf79xxa.o
+                0x000000000000c59e                TRF79xxA_reset
+ .text.TRF79xxA_processIRQ
+                0x000000000000c5e8      0x21a build/Hardware/trf79xxa.o
+                0x000000000000c5e8                TRF79xxA_processIRQ
+ .text.TRF79xxA_turnRfOff
+                0x000000000000c802       0x18 build/Hardware/trf79xxa.o
+                0x000000000000c802                TRF79xxA_turnRfOff
+ .text.TRF79xxA_turnRfOn
+                0x000000000000c81a       0x1c build/Hardware/trf79xxa.o
+                0x000000000000c81a                TRF79xxA_turnRfOn
+ .text.TRF79xxA_setupInitiator
+                0x000000000000c836       0x86 build/Hardware/trf79xxa.o
+                0x000000000000c836                TRF79xxA_setupInitiator
+ .text.TRF79xxA_waitTxIRQ
+                0x000000000000c8bc       0x56 build/Hardware/trf79xxa.o
+                0x000000000000c8bc                TRF79xxA_waitTxIRQ
+ .text.TRF79xxA_waitRxIRQ
+                0x000000000000c912       0x78 build/Hardware/trf79xxa.o
+                0x000000000000c912                TRF79xxA_waitRxIRQ
+ *fill*         0x000000000000c98a        0x2 
+ .text.TRF79xxA_waitRxData
+                0x000000000000c98c       0x64 build/Hardware/trf79xxa.o
+                0x000000000000c98c                TRF79xxA_waitRxData
+ .text.TRF79xxA_setTrfPowerSetting
+                0x000000000000c9f0        0x6 build/Hardware/trf79xxa.o
+                0x000000000000c9f0                TRF79xxA_setTrfPowerSetting
+ .text.TRF79xxA_getRxBytesReceived
+                0x000000000000c9f6        0x6 build/Hardware/trf79xxa.o
+                0x000000000000c9f6                TRF79xxA_getRxBytesReceived
+ .text.TRF79xxA_getTrfBuffer
+                0x000000000000c9fc        0x6 build/Hardware/trf79xxa.o
+                0x000000000000c9fc                TRF79xxA_getTrfBuffer
+ .text.TRF79xxA_timerHandler
+                0x000000000000ca02       0x42 build/Hardware/trf79xxa.o
+                0x000000000000ca02                TRF79xxA_timerHandler
+ .text.TRF79xxA_irqHandler
+                0x000000000000ca44       0x5a build/Hardware/trf79xxa.o
+                0x000000000000ca44                TRF79xxA_irqHandler
+ .text.UART_nibble2Ascii
+                0x000000000000ca9e       0x1a build/Hardware/uart.o
+                0x000000000000ca9e                UART_nibble2Ascii
+ .text.UART_putChar
+                0x000000000000cab8       0x10 build/Hardware/uart.o
+                0x000000000000cab8                UART_putChar
+ .text.UART_putByte
+                0x000000000000cac8       0x34 build/Hardware/uart.o
+                0x000000000000cac8                UART_putByte
+ .text.UART_putNewLine
+                0x000000000000cafc       0x16 build/Hardware/uart.o
+                0x000000000000cafc                UART_putNewLine
+ .text.UART_putBufferAscii
+                0x000000000000cb12       0x1e build/Hardware/uart.o
+                0x000000000000cb12                UART_putBufferAscii
+ .text.UART_sendCString
+                0x000000000000cb30       0x14 build/Hardware/uart.o
+                0x000000000000cb30                UART_sendCString
+ .text.UART_getLine
+                0x000000000000cb44       0x46 build/Hardware/uart.o
+                0x000000000000cb44                UART_getLine
+ .text.UART_setup
+                0x000000000000cb8a       0x34 build/Hardware/uart.o
+                0x000000000000cb8a                UART_setup
+ .text.FeliCa_init
+                0x000000000000cbbe       0x2e build/NFC/felica.o
+                0x000000000000cbbe                FeliCa_init
+ .text.ISO14443A_init
+                0x000000000000cbec       0x4c build/NFC/iso14443a.o
+                0x000000000000cbec                ISO14443A_init
+ .text.ISO14443B_init
+                0x000000000000cc38       0x1a build/NFC/iso14443b.o
+                0x000000000000cc38                ISO14443B_init
+ .text.ISO15693_init
+                0x000000000000cc52       0x52 build/NFC/iso15693.o
+                0x000000000000cc52                ISO15693_init
+ .text.NDEF_setBlockNumberBit
+                0x000000000000cca4        0x6 build/NFC/ndef.o
+                0x000000000000cca4                NDEF_setBlockNumberBit
+ .text.putReply
+                0x000000000000ccaa       0x56 build/NFC/nfc_app.o
+ .text.hexNibble
+                0x000000000000cd00       0x3e build/NFC/nfc_app.o
+ .text.parseHexBytes
+                0x000000000000cd3e       0x66 build/NFC/nfc_app.o
+ .text.parseHexNumber
+                0x000000000000cda4       0xb0 build/NFC/nfc_app.o
+ .text.NFC_appTilelink
+                0x000000000000ce54      0x1c4 build/NFC/nfc_app.o
+                0x000000000000ce54                NFC_appTilelink
+ .text.NFC_init
+                0x000000000000d018       0x22 build/NFC/nfc_app.o
+                0x000000000000d018                NFC_init
+ .text.Tilelink_fieldOn
+                0x000000000000d03a       0x26 build/NFC/tilelink.o
+                0x000000000000d03a                Tilelink_fieldOn
+ .text.transmitFrame
+                0x000000000000d060       0xa6 build/NFC/tilelink.o
+ .text.Tilelink_fieldOff
+                0x000000000000d106        0xa build/NFC/tilelink.o
+                0x000000000000d106                Tilelink_fieldOff
+ .text.Tilelink_setAsk10
+                0x000000000000d110       0x18 build/NFC/tilelink.o
+                0x000000000000d110                Tilelink_setAsk10
+ .text.Tilelink_sendRaw
+                0x000000000000d128       0x3c build/NFC/tilelink.o
+                0x000000000000d128                Tilelink_sendRaw
+ .text.Tilelink_write
+                0x000000000000d164       0xba build/NFC/tilelink.o
+                0x000000000000d164                Tilelink_write
+ .text.Tilelink_read
+                0x000000000000d21e       0x56 build/NFC/tilelink.o
+                0x000000000000d21e                Tilelink_read
+ .text.udivmodsi4
+                0x000000000000d274       0x86 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(lib2divSI.o)
+                0x000000000000d274                udivmodsi4
+ .text.__divsi3
+                0x000000000000d2fa       0x4a /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(lib2divSI.o)
+                0x000000000000d2fa                __mspabi_divli
+ .text.__udivsi3
+                0x000000000000d344        0xe /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(lib2divSI.o)
+                0x000000000000d344                __mspabi_divul
+                0x000000000000d344                __mspabi_divlu
+ .text          0x000000000000d352       0x10 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(epilogue.o)
+                0x000000000000d352                __mspabi_func_epilog_7
+                0x000000000000d354                __mspabi_func_epilog_6
+                0x000000000000d356                __mspabi_func_epilog_5
+                0x000000000000d358                __mspabi_func_epilog_4
+                0x000000000000d35a                __mspabi_func_epilog_3
+                0x000000000000d35c                __mspabi_func_epilog_2
+                0x000000000000d35e                __mspabi_func_epilog_1
+ .text.__mspabi_slll
+                0x000000000000d362        0xc /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(slli.o)
+                0x000000000000d368                __mspabi_slll
+ .text.__mspabi_srll
+                0x000000000000d36e        0xe /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(srli.o)
+                0x000000000000d376                __mspabi_srll
+ .text.__mulhi3
+                0x000000000000d37c       0x42 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libmul_none.a(mpy.o)
+                0x000000000000d37c                __mspabi_mpyi
+ .text.memset   0x000000000000d3be       0x12 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/../../../../msp430-elf/lib/430/libc.a(lib_a-memset.o)
+                0x000000000000d3be                memset
+ *(.text.*personality*)
+ *(.gnu.warning)
+ *(.interp .hash .dynsym .dynstr .gnu.version*)
+                [!provide]                        PROVIDE (__etext = .)
+                [!provide]                        PROVIDE (_etext = .)
+                [!provide]                        PROVIDE (etext = .)
+                0x000000000000d3d0                . = ALIGN (0x2)
+ *(.init)
+ *(.fini)
+ *(.tm_clone_table)
+
+.data           0x0000000000000200        0x0 load address 0x000000000000d3d0
+                0x0000000000000200                . = ALIGN (0x2)
+                [!provide]                        PROVIDE (__datastart = .)
+ *(.jcr)
+ *(.data.rel.ro.local)
+ *(.data.rel.ro*)
+ *(.dynamic)
+ *(.data .data.* .gnu.linkonce.d.*)
+ *(.gnu.linkonce.d.*personality*)
+ *(.data1)
+ *(.got.plt)
+ *(.got)
+                0x0000000000000200                . = ALIGN (0x2)
+ *(.sdata .sdata.* .gnu.linkonce.s.* D_2 D_1)
+                0x0000000000000200                . = ALIGN (0x2)
+                0x0000000000000200                _edata = .
+                [!provide]                        PROVIDE (edata = .)
+                [!provide]                        PROVIDE (__dataend = .)
+                [!provide]                        PROVIDE (__romdatastart = LOADADDR (.data))
+                [!provide]                        PROVIDE (__romdatacopysize = SIZEOF (.data))
+
+.bss            0x0000000000000200      0x114 load address 0x000000000000d3d0
+                0x0000000000000200                . = ALIGN (0x2)
+                0x0000000000000200                PROVIDE (__bssstart = .)
+ *(.dynbss)
+ *(.sbss .sbss.*)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss.TI_8MHz_Counts_Per_VLO_Clock
+                0x0000000000000200        0x2 build/Hardware/VLO_Library_gcc.o
+                0x0000000000000200                TI_8MHz_Counts_Per_VLO_Clock
+ .bss.ui16VLOConst
+                0x0000000000000202        0x2 build/Hardware/mcu.o
+ .bss.g_ui8TimeoutFlag
+                0x0000000000000204        0x1 build/Hardware/trf79xxa.o
+ .bss.g_ui8IrqFlag
+                0x0000000000000205        0x1 build/Hardware/trf79xxa.o
+ .bss.g_eTrfGeneralSettings
+                0x0000000000000206        0x4 build/Hardware/trf79xxa.o
+ .bss.g_sTrfStatus
+                0x000000000000020a        0x2 build/Hardware/trf79xxa.o
+ .bss.g_ui8FifoRxLength
+                0x000000000000020c        0x1 build/Hardware/trf79xxa.o
+ .bss.g_ui8FifoOffset
+                0x000000000000020d        0x1 build/Hardware/trf79xxa.o
+ .bss.g_ui8CollisionPosition
+                0x000000000000020e        0x1 build/Hardware/trf79xxa.o
+ .bss.g_pui8TrfBuffer
+                0x000000000000020f       0x64 build/Hardware/trf79xxa.o
+                0x000000000000020f                g_pui8TrfBuffer
+ *fill*         0x0000000000000273        0x1 
+ .bss.g_ui32NdefLength
+                0x0000000000000274        0x4 build/NFC/felica.o
+ .bss.g_pui8IDm
+                0x0000000000000278        0x8 build/NFC/felica.o
+ .bss.g_ui8AtsSupportedBitrates
+                0x0000000000000280        0x1 build/NFC/iso14443a.o
+ .bss.g_bType4ACompliant
+                0x0000000000000281        0x1 build/NFC/iso14443a.o
+ .bss.g_ui8Iso14443aSAK
+                0x0000000000000282        0x1 build/NFC/iso14443a.o
+ .bss.g_ui8MaxRecurviseCalls
+                0x0000000000000283        0x1 build/NFC/iso14443a.o
+ .bss.g_ui8RecursionCount
+                0x0000000000000284        0x1 build/NFC/iso14443a.o
+ .bss.g_ui8ValidBits
+                0x0000000000000285        0x1 build/NFC/iso14443a.o
+ .bss.g_ui8ValidUidByteCount
+                0x0000000000000286        0x1 build/NFC/iso14443a.o
+ .bss.g_ui8UidPos
+                0x0000000000000287        0x1 build/NFC/iso14443a.o
+ .bss.g_pui8PartialUid
+                0x0000000000000288        0x5 build/NFC/iso14443a.o
+ .bss.g_pui8CompleteUid
+                0x000000000000028d        0xa build/NFC/iso14443a.o
+ *fill*         0x0000000000000297        0x1 
+ .bss.g_sUidSize
+                0x0000000000000298        0x2 build/NFC/iso14443a.o
+ .bss.g_bType4BCompliant
+                0x000000000000029a        0x1 build/NFC/iso14443b.o
+ .bss.g_pui8Pupi
+                0x000000000000029b        0x4 build/NFC/iso14443b.o
+ .bss.g_ui8RecursionCount
+                0x000000000000029f        0x1 build/NFC/iso15693.o
+ .bss.g_ui8TagDetectedCount
+                0x00000000000002a0        0x1 build/NFC/iso15693.o
+ .bss.g_pui8AnticollisionMaskBuffer
+                0x00000000000002a1        0x8 build/NFC/iso15693.o
+ .bss.g_pui8Iso15693UId
+                0x00000000000002a9        0x8 build/NFC/iso15693.o
+ .bss.g_bBlockNumberBit
+                0x00000000000002b1        0x1 build/NFC/ndef.o
+ .bss.g_pui8TilelinkLine
+                0x00000000000002b2       0x60 build/NFC/nfc_app.o
+ .bss.g_bTilelinkAsk10
+                0x0000000000000312        0x1 build/NFC/tilelink.o
+ .bss.g_bTilelinkFieldOn
+                0x0000000000000313        0x1 build/NFC/tilelink.o
+                0x0000000000000314                . = ALIGN (0x2)
+ *(COMMON)
+                [!provide]                        PROVIDE (__bssend = .)
+                0x0000000000000114                PROVIDE (__bsssize = SIZEOF (.bss))
+
+.noinit         0x0000000000000314        0x0 load address 0x000000000000d3d0
+                0x0000000000000314                . = ALIGN (0x2)
+                [!provide]                        PROVIDE (__noinit_start = .)
+ *(.noinit)
+                0x0000000000000314                . = ALIGN (0x2)
+                [!provide]                        PROVIDE (__noinit_end = .)
+                0x0000000000000314                end = .
+
+.heap           0x0000000000000314        0x4 load address 0x000000000000d3d0
+                0x0000000000000314                . = ALIGN (0x2)
+                0x0000000000000314                __heap_start__ = .
+                0x0000000000000314                _end = __heap_start__
+                [!provide]                        PROVIDE (end = .)
+ *(.heap)
+                0x0000000000000314                _end = .
+                [!provide]                        PROVIDE (end = .)
+                0x0000000000000314        0x4 LONG 0x0
+                0x0000000000000318                __heap_end__ = .
+                0x0000000000000318                __HeapLimit = __heap_end__
+
+.stack          0x0000000000000400        0x0
+                0x0000000000000400                PROVIDE (__stack = .)
+ *(.stack)
+
+.infoA
+
+.infoB
+
+.infoC
+
+.infoD
+
+.MSP430.attributes
+                0x0000000000000000       0x17
+ *(.MSP430.attributes)
+ .MSP430.attributes
+                0x0000000000000000       0x17 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/../../../../msp430-elf/lib/430/crt0.o
+ .MSP430.attributes
+                0x0000000000000017       0x17 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/crtbegin_no_eh.o
+ .MSP430.attributes
+                0x000000000000002e       0x17 build/main.o
+ .MSP430.attributes
+                0x0000000000000045       0x17 build/system_pre_init.o
+ .MSP430.attributes
+                0x000000000000005c       0x17 build/Hardware/VLO_Library_gcc.o
+ .MSP430.attributes
+                0x0000000000000073       0x17 build/Hardware/mcu.o
+ .MSP430.attributes
+                0x000000000000008a       0x17 build/Hardware/spi.o
+ .MSP430.attributes
+                0x00000000000000a1       0x17 build/Hardware/trf79xxa.o
+ .MSP430.attributes
+                0x00000000000000b8       0x17 build/Hardware/uart.o
+ .MSP430.attributes
+                0x00000000000000cf       0x17 build/NFC/felica.o
+ .MSP430.attributes
+                0x00000000000000e6       0x17 build/NFC/iso14443a.o
+ .MSP430.attributes
+                0x00000000000000fd       0x17 build/NFC/iso14443b.o
+ .MSP430.attributes
+                0x0000000000000114       0x17 build/NFC/iso15693.o
+ .MSP430.attributes
+                0x000000000000012b       0x17 build/NFC/ndef.o
+ .MSP430.attributes
+                0x0000000000000142       0x17 build/NFC/nfc_app.o
+ .MSP430.attributes
+                0x0000000000000159       0x17 build/NFC/tilelink.o
+ .MSP430.attributes
+                0x0000000000000170       0x17 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(lib2divSI.o)
+ .MSP430.attributes
+                0x0000000000000187       0x17 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(epilogue.o)
+ .MSP430.attributes
+                0x000000000000019e       0x17 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(slli.o)
+ .MSP430.attributes
+                0x00000000000001b5       0x17 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(srai.o)
+ .MSP430.attributes
+                0x00000000000001cc       0x17 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(srli.o)
+ .MSP430.attributes
+                0x00000000000001e3       0x17 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(_udivdi3.o)
+ .MSP430.attributes
+                0x00000000000001fa       0x17 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(_clzdi2.o)
+ .MSP430.attributes
+                0x0000000000000211       0x17 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(_clz.o)
+ .MSP430.attributes
+                0x0000000000000228       0x17 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libmul_none.a(mpy.o)
+ .MSP430.attributes
+                0x000000000000023f       0x17 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/../../../../msp430-elf/lib/430/libcrt.a(crt_bss.o)
+ .MSP430.attributes
+                0x0000000000000256       0x17 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/../../../../msp430-elf/lib/430/libcrt.a(crt_main.o)
+ .MSP430.attributes
+                0x000000000000026d       0x17 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/../../../../msp430-elf/lib/430/libc.a(lib_a-memset.o)
+ .MSP430.attributes
+                0x0000000000000284       0x17 /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/crtend_no_eh.o
+ *(.gnu.attributes)
+ *(__TI_build_attributes)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x39
+ *(.comment)
+ .comment       0x0000000000000000       0x39 build/main.o
+                                         0x3a (size before relaxing)
+ .comment       0x0000000000000039       0x3a build/Hardware/VLO_Library_gcc.o
+ .comment       0x0000000000000039       0x3a build/Hardware/mcu.o
+ .comment       0x0000000000000039       0x3a build/Hardware/spi.o
+ .comment       0x0000000000000039       0x3a build/Hardware/trf79xxa.o
+ .comment       0x0000000000000039       0x3a build/Hardware/uart.o
+ .comment       0x0000000000000039       0x3a build/NFC/felica.o
+ .comment       0x0000000000000039       0x3a build/NFC/iso14443a.o
+ .comment       0x0000000000000039       0x3a build/NFC/iso14443b.o
+ .comment       0x0000000000000039       0x3a build/NFC/iso15693.o
+ .comment       0x0000000000000039       0x3a build/NFC/ndef.o
+ .comment       0x0000000000000039       0x3a build/NFC/nfc_app.o
+ .comment       0x0000000000000039       0x3a build/NFC/tilelink.o
+ .comment       0x0000000000000039       0x3a /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(lib2divSI.o)
+ .comment       0x0000000000000039       0x3a /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a(_udivdi3.o)
+ .comment       0x0000000000000039       0x3a /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libmul_none.a(mpy.o)
+ .comment       0x0000000000000039       0x3a /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/../../../../msp430-elf/lib/430/libc.a(lib_a-memset.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000      0x590
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x20 build/main.o
+ .debug_aranges
+                0x0000000000000020       0x20 build/Hardware/VLO_Library_gcc.o
+ .debug_aranges
+                0x0000000000000040       0x38 build/Hardware/mcu.o
+ .debug_aranges
+                0x0000000000000078       0x70 build/Hardware/spi.o
+ .debug_aranges
+                0x00000000000000e8      0x110 build/Hardware/trf79xxa.o
+ .debug_aranges
+                0x00000000000001f8       0x80 build/Hardware/uart.o
+ .debug_aranges
+                0x0000000000000278       0x50 build/NFC/felica.o
+ .debug_aranges
+                0x00000000000002c8       0x98 build/NFC/iso14443a.o
+ .debug_aranges
+                0x0000000000000360       0x58 build/NFC/iso14443b.o
+ .debug_aranges
+                0x00000000000003b8       0x80 build/NFC/iso15693.o
+ .debug_aranges
+                0x0000000000000438       0x70 build/NFC/ndef.o
+ .debug_aranges
+                0x00000000000004a8       0x90 build/NFC/nfc_app.o
+ .debug_aranges
+                0x0000000000000538       0x58 build/NFC/tilelink.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000    0x10a40
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x0000000000000000      0xf83 build/main.o
+ .debug_info    0x0000000000000f83      0x5bd build/Hardware/VLO_Library_gcc.o
+ .debug_info    0x0000000000001540      0xf1d build/Hardware/mcu.o
+ .debug_info    0x000000000000245d     0x1091 build/Hardware/spi.o
+ .debug_info    0x00000000000034ee     0x1c54 build/Hardware/trf79xxa.o
+ .debug_info    0x0000000000005142     0x12cd build/Hardware/uart.o
+ .debug_info    0x000000000000640f     0x1431 build/NFC/felica.o
+ .debug_info    0x0000000000007840     0x1c52 build/NFC/iso14443a.o
+ .debug_info    0x0000000000009492     0x1467 build/NFC/iso14443b.o
+ .debug_info    0x000000000000a8f9     0x1c07 build/NFC/iso15693.o
+ .debug_info    0x000000000000c500     0x1559 build/NFC/ndef.o
+ .debug_info    0x000000000000da59     0x1cb8 build/NFC/nfc_app.o
+ .debug_info    0x000000000000f711     0x132f build/NFC/tilelink.o
+
+.debug_abbrev   0x0000000000000000     0x244f
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000      0x1f9 build/main.o
+ .debug_abbrev  0x00000000000001f9       0xa8 build/Hardware/VLO_Library_gcc.o
+ .debug_abbrev  0x00000000000002a1      0x209 build/Hardware/mcu.o
+ .debug_abbrev  0x00000000000004aa      0x261 build/Hardware/spi.o
+ .debug_abbrev  0x000000000000070b      0x3a1 build/Hardware/trf79xxa.o
+ .debug_abbrev  0x0000000000000aac      0x287 build/Hardware/uart.o
+ .debug_abbrev  0x0000000000000d33      0x2d4 build/NFC/felica.o
+ .debug_abbrev  0x0000000000001007      0x34d build/NFC/iso14443a.o
+ .debug_abbrev  0x0000000000001354      0x358 build/NFC/iso14443b.o
+ .debug_abbrev  0x00000000000016ac      0x30e build/NFC/iso15693.o
+ .debug_abbrev  0x00000000000019ba      0x37a build/NFC/ndef.o
+ .debug_abbrev  0x0000000000001d34      0x40f build/NFC/nfc_app.o
+ .debug_abbrev  0x0000000000002143      0x30c build/NFC/tilelink.o
+
+.debug_line     0x0000000000000000     0x465c
+ *(.debug_line .debug_line.* .debug_line_end)
+ .debug_line    0x0000000000000000      0x1c5 build/main.o
+ .debug_line.text.startup.main
+                0x00000000000001c5      0x103 build/main.o
+ .debug_line_end
+                0x00000000000002c8        0x0 build/main.o
+ .debug_line    0x00000000000002c8       0x8b build/Hardware/VLO_Library_gcc.o
+ .debug_line.text.TI_measureVLO
+                0x0000000000000353      0x241 build/Hardware/VLO_Library_gcc.o
+ .debug_line_end
+                0x0000000000000594        0x0 build/Hardware/VLO_Library_gcc.o
+ .debug_line    0x0000000000000594      0x192 build/Hardware/mcu.o
+ .debug_line.text.MCU_setCounter
+                0x0000000000000726       0x92 build/Hardware/mcu.o
+ .debug_line.text.MCU_delayMillisecond
+                0x00000000000007b8       0x45 build/Hardware/mcu.o
+ .debug_line.text.MCU_initClock
+                0x00000000000007fd       0xe0 build/Hardware/mcu.o
+ .debug_line.text.MCU_calculateVLOFreq
+                0x00000000000008dd       0x60 build/Hardware/mcu.o
+ .debug_line_end
+                0x000000000000093d        0x0 build/Hardware/mcu.o
+ .debug_line    0x000000000000093d      0x192 build/Hardware/spi.o
+ .debug_line.text.SPI_receiveByte
+                0x0000000000000acf       0x56 build/Hardware/spi.o
+ .debug_line.text.SPI_sendByte
+                0x0000000000000b25       0x4e build/Hardware/spi.o
+ .debug_line.text.SPI_directCommand
+                0x0000000000000b73       0x4e build/Hardware/spi.o
+ .debug_line.text.SPI_rawWrite
+                0x0000000000000bc1       0xbb build/Hardware/spi.o
+ .debug_line.text.SPI_readCont
+                0x0000000000000c7c       0xc8 build/Hardware/spi.o
+ .debug_line.text.SPI_readSingle
+                0x0000000000000d44       0x7c build/Hardware/spi.o
+ .debug_line.text.SPI_usciSet
+                0x0000000000000dc0       0xca build/Hardware/spi.o
+ .debug_line.text.SPI_writeSingle
+                0x0000000000000e8a       0x62 build/Hardware/spi.o
+ .debug_line.text.SPI_setup
+                0x0000000000000eec       0x5e build/Hardware/spi.o
+ .debug_line_end
+                0x0000000000000f4a        0x0 build/Hardware/spi.o
+ .debug_line    0x0000000000000f4a      0x1b7 build/Hardware/trf79xxa.o
+ .debug_line.text.TRF79xxA_resetFIFO
+                0x0000000000001101       0x38 build/Hardware/trf79xxa.o
+ .debug_line.text.TRF79xxA_readIrqStatus
+                0x0000000000001139       0x42 build/Hardware/trf79xxa.o
+ .debug_line.text.TRF79xxA_readRegister
+                0x000000000000117b       0x42 build/Hardware/trf79xxa.o
+ .debug_line.text.TRF79xxA_writeRaw
+                0x00000000000011bd      0x237 build/Hardware/trf79xxa.o
+ .debug_line.text.TRF79xxA_resetIrqStatus
+                0x00000000000013f4       0x56 build/Hardware/trf79xxa.o
+ .debug_line.text.TRF79xxA_writeRegister
+                0x000000000000144a       0xd2 build/Hardware/trf79xxa.o
+ .debug_line.text.TRF79xxA_initialSettings
+                0x000000000000151c      0x108 build/Hardware/trf79xxa.o
+ .debug_line.text.TRF79xxA_reset
+                0x0000000000001624       0x90 build/Hardware/trf79xxa.o
+ .debug_line.text.TRF79xxA_processIRQ
+                0x00000000000016b4      0x53f build/Hardware/trf79xxa.o
+ .debug_line.text.TRF79xxA_turnRfOff
+                0x0000000000001bf3       0x50 build/Hardware/trf79xxa.o
+ .debug_line.text.TRF79xxA_turnRfOn
+                0x0000000000001c43       0x50 build/Hardware/trf79xxa.o
+ .debug_line.text.TRF79xxA_setupInitiator
+                0x0000000000001c93       0x97 build/Hardware/trf79xxa.o
+ .debug_line.text.TRF79xxA_waitTxIRQ
+                0x0000000000001d2a      0x102 build/Hardware/trf79xxa.o
+ .debug_line.text.TRF79xxA_waitRxIRQ
+                0x0000000000001e2c      0x18c build/Hardware/trf79xxa.o
+ .debug_line.text.TRF79xxA_waitRxData
+                0x0000000000001fb8       0x8f build/Hardware/trf79xxa.o
+ .debug_line.text.TRF79xxA_setTrfPowerSetting
+                0x0000000000002047       0x2c build/Hardware/trf79xxa.o
+ .debug_line.text.TRF79xxA_getRxBytesReceived
+                0x0000000000002073       0x24 build/Hardware/trf79xxa.o
+ .debug_line.text.TRF79xxA_getTrfBuffer
+                0x0000000000002097       0x24 build/Hardware/trf79xxa.o
+ .debug_line.text.TRF79xxA_timerHandler
+                0x00000000000020bb       0xac build/Hardware/trf79xxa.o
+ .debug_line.text.TRF79xxA_irqHandler
+                0x0000000000002167       0xb0 build/Hardware/trf79xxa.o
+ .debug_line_end
+                0x0000000000002217        0x0 build/Hardware/trf79xxa.o
+ .debug_line    0x0000000000002217      0x193 build/Hardware/uart.o
+ .debug_line.text.UART_nibble2Ascii
+                0x00000000000023aa       0x53 build/Hardware/uart.o
+ .debug_line.text.UART_putChar
+                0x00000000000023fd       0x4a build/Hardware/uart.o
+ .debug_line.text.UART_putByte
+                0x0000000000002447       0x68 build/Hardware/uart.o
+ .debug_line.text.UART_putNewLine
+                0x00000000000024af       0x2a build/Hardware/uart.o
+ .debug_line.text.UART_putBufferAscii
+                0x00000000000024d9       0x4a build/Hardware/uart.o
+ .debug_line.text.UART_sendCString
+                0x0000000000002523       0x45 build/Hardware/uart.o
+ .debug_line.text.UART_getLine
+                0x0000000000002568       0xdc build/Hardware/uart.o
+ .debug_line.text.UART_setup
+                0x0000000000002644       0xe0 build/Hardware/uart.o
+ .debug_line_end
+                0x0000000000002724        0x0 build/Hardware/uart.o
+ .debug_line    0x0000000000002724      0x1b1 build/NFC/felica.o
+ .debug_line.text.FeliCa_init
+                0x00000000000028d5      0x154 build/NFC/felica.o
+ .debug_line_end
+                0x0000000000002a29        0x0 build/NFC/felica.o
+ .debug_line    0x0000000000002a29      0x1cc build/NFC/iso14443a.o
+ .debug_line.text.ISO14443A_init
+                0x0000000000002bf5      0x1cc build/NFC/iso14443a.o
+ .debug_line_end
+                0x0000000000002dc1        0x0 build/NFC/iso14443a.o
+ .debug_line    0x0000000000002dc1      0x1bd build/NFC/iso14443b.o
+ .debug_line.text.ISO14443B_init
+                0x0000000000002f7e       0xcc build/NFC/iso14443b.o
+ .debug_line_end
+                0x000000000000304a        0x0 build/NFC/iso14443b.o
+ .debug_line    0x000000000000304a      0x1bc build/NFC/iso15693.o
+ .debug_line.text.ISO15693_init
+                0x0000000000003206      0x276 build/NFC/iso15693.o
+ .debug_line_end
+                0x000000000000347c        0x0 build/NFC/iso15693.o
+ .debug_line    0x000000000000347c      0x1b8 build/NFC/ndef.o
+ .debug_line.text.NDEF_setBlockNumberBit
+                0x0000000000003634       0x2c build/NFC/ndef.o
+ .debug_line_end
+                0x0000000000003660        0x0 build/NFC/ndef.o
+ .debug_line    0x0000000000003660      0x20b build/NFC/nfc_app.o
+ .debug_line.text.putReply
+                0x000000000000386b       0x95 build/NFC/nfc_app.o
+ .debug_line.text.hexNibble
+                0x0000000000003900       0xa2 build/NFC/nfc_app.o
+ .debug_line.text.parseHexBytes
+                0x00000000000039a2      0x128 build/NFC/nfc_app.o
+ .debug_line.text.parseHexNumber
+                0x0000000000003aca      0x12e build/NFC/nfc_app.o
+ .debug_line.text.NFC_appTilelink
+                0x0000000000003bf8      0x2f9 build/NFC/nfc_app.o
+ .debug_line.text.NFC_init
+                0x0000000000003ef1       0x42 build/NFC/nfc_app.o
+ .debug_line_end
+                0x0000000000003f33        0x0 build/NFC/nfc_app.o
+ .debug_line    0x0000000000003f33      0x1b2 build/NFC/tilelink.o
+ .debug_line.text.Tilelink_fieldOn
+                0x00000000000040e5       0x55 build/NFC/tilelink.o
+ .debug_line.text.transmitFrame
+                0x000000000000413a      0x178 build/NFC/tilelink.o
+ .debug_line.text.Tilelink_fieldOff
+                0x00000000000042b2       0x31 build/NFC/tilelink.o
+ .debug_line.text.Tilelink_setAsk10
+                0x00000000000042e3       0x47 build/NFC/tilelink.o
+ .debug_line.text.Tilelink_sendRaw
+                0x000000000000432a       0x9d build/NFC/tilelink.o
+ .debug_line.text.Tilelink_write
+                0x00000000000043c7      0x1cd build/NFC/tilelink.o
+ .debug_line.text.Tilelink_read
+                0x0000000000004594       0xc8 build/NFC/tilelink.o
+ .debug_line_end
+                0x000000000000465c        0x0 build/NFC/tilelink.o
+
+.debug_frame    0x0000000000000000     0x15d4
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000       0x30 build/main.o
+ .debug_frame   0x0000000000000030       0x44 build/Hardware/VLO_Library_gcc.o
+ .debug_frame   0x0000000000000074       0x54 build/Hardware/mcu.o
+ .debug_frame   0x00000000000000c8      0x168 build/Hardware/spi.o
+ .debug_frame   0x0000000000000230      0x480 build/Hardware/trf79xxa.o
+ .debug_frame   0x00000000000006b0      0x220 build/Hardware/uart.o
+ .debug_frame   0x00000000000008d0      0x114 build/NFC/felica.o
+ .debug_frame   0x00000000000009e4      0x21c build/NFC/iso14443a.o
+ .debug_frame   0x0000000000000c00      0x138 build/NFC/iso14443b.o
+ .debug_frame   0x0000000000000d38      0x290 build/NFC/iso15693.o
+ .debug_frame   0x0000000000000fc8      0x194 build/NFC/ndef.o
+ .debug_frame   0x000000000000115c      0x2d0 build/NFC/nfc_app.o
+ .debug_frame   0x000000000000142c      0x1a8 build/NFC/tilelink.o
+
+.debug_str      0x0000000000000000     0x1f34
+ *(.debug_str)
+ .debug_str     0x0000000000000000      0x99d build/main.o
+                                        0xa1b (size before relaxing)
+ .debug_str     0x000000000000099d       0x67 build/Hardware/VLO_Library_gcc.o
+                                        0x4b9 (size before relaxing)
+ .debug_str     0x0000000000000a04       0x78 build/Hardware/mcu.o
+                                        0x9b6 (size before relaxing)
+ .debug_str     0x0000000000000a7c       0xe4 build/Hardware/spi.o
+                                        0x9df (size before relaxing)
+ .debug_str     0x0000000000000b60      0x4f8 build/Hardware/trf79xxa.o
+                                        0xf50 (size before relaxing)
+ .debug_str     0x0000000000001058      0x18e build/Hardware/uart.o
+                                        0xac9 (size before relaxing)
+ .debug_str     0x00000000000011e6      0x11d build/NFC/felica.o
+                                        0xb45 (size before relaxing)
+ .debug_str     0x0000000000001303      0x427 build/NFC/iso14443a.o
+                                        0xf66 (size before relaxing)
+ .debug_str     0x000000000000172a      0x12e build/NFC/iso14443b.o
+                                        0xbcb (size before relaxing)
+ .debug_str     0x0000000000001858      0x283 build/NFC/iso15693.o
+                                        0xe19 (size before relaxing)
+ .debug_str     0x0000000000001adb      0x189 build/NFC/ndef.o
+                                        0xbd0 (size before relaxing)
+ .debug_str     0x0000000000001c64      0x22f build/NFC/nfc_app.o
+                                       0x1071 (size before relaxing)
+ .debug_str     0x0000000000001e93       0xa1 build/NFC/tilelink.o
+                                        0xb73 (size before relaxing)
+
+.debug_loc      0x0000000000000000     0x4e40
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000       0x32 build/main.o
+ .debug_loc     0x0000000000000032       0xf3 build/Hardware/mcu.o
+ .debug_loc     0x0000000000000125      0x1e2 build/Hardware/spi.o
+ .debug_loc     0x0000000000000307      0x685 build/Hardware/trf79xxa.o
+ .debug_loc     0x000000000000098c      0x3cf build/Hardware/uart.o
+ .debug_loc     0x0000000000000d5b      0x498 build/NFC/felica.o
+ .debug_loc     0x00000000000011f3     0x105a build/NFC/iso14443a.o
+ .debug_loc     0x000000000000224d      0x616 build/NFC/iso14443b.o
+ .debug_loc     0x0000000000002863     0x1324 build/NFC/iso15693.o
+ .debug_loc     0x0000000000003b87      0x964 build/NFC/ndef.o
+ .debug_loc     0x00000000000044eb      0x57c build/NFC/nfc_app.o
+ .debug_loc     0x0000000000004a67      0x3d9 build/NFC/tilelink.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x0000000000000000      0x550
+ *(.debug_ranges)
+ .debug_ranges  0x0000000000000000       0x10 build/main.o
+ .debug_ranges  0x0000000000000010       0x10 build/Hardware/VLO_Library_gcc.o
+ .debug_ranges  0x0000000000000020       0x28 build/Hardware/mcu.o
+ .debug_ranges  0x0000000000000048       0x60 build/Hardware/spi.o
+ .debug_ranges  0x00000000000000a8      0x100 build/Hardware/trf79xxa.o
+ .debug_ranges  0x00000000000001a8       0x70 build/Hardware/uart.o
+ .debug_ranges  0x0000000000000218       0x40 build/NFC/felica.o
+ .debug_ranges  0x0000000000000258       0x88 build/NFC/iso14443a.o
+ .debug_ranges  0x00000000000002e0       0x78 build/NFC/iso14443b.o
+ .debug_ranges  0x0000000000000358       0x70 build/NFC/iso15693.o
+ .debug_ranges  0x00000000000003c8       0x60 build/NFC/ndef.o
+ .debug_ranges  0x0000000000000428       0xe0 build/NFC/nfc_app.o
+ .debug_ranges  0x0000000000000508       0x48 build/NFC/tilelink.o
+
+.debug_macro
+ *(.debug_macro)
+
+/DISCARD/
+ *(.note.GNU-stack)
+                [!provide]                        PROVIDE (IE1 = 0x0)
+                [!provide]                        PROVIDE (IFG1 = 0x2)
+                [!provide]                        PROVIDE (IE2 = 0x1)
+                0x0000000000000003                PROVIDE (IFG2 = 0x3)
+                [!provide]                        PROVIDE (ADC10DTC0 = 0x48)
+                [!provide]                        PROVIDE (ADC10DTC1 = 0x49)
+                [!provide]                        PROVIDE (ADC10AE0 = 0x4a)
+                [!provide]                        PROVIDE (ADC10CTL0 = 0x1b0)
+                [!provide]                        PROVIDE (ADC10CTL1 = 0x1b2)
+                [!provide]                        PROVIDE (ADC10MEM = 0x1b4)
+                [!provide]                        PROVIDE (ADC10SA = 0x1bc)
+                0x0000000000000056                PROVIDE (DCOCTL = 0x56)
+                0x0000000000000057                PROVIDE (BCSCTL1 = 0x57)
+                0x0000000000000058                PROVIDE (BCSCTL2 = 0x58)
+                0x0000000000000053                PROVIDE (BCSCTL3 = 0x53)
+                [!provide]                        PROVIDE (CACTL1 = 0x59)
+                [!provide]                        PROVIDE (CACTL2 = 0x5a)
+                [!provide]                        PROVIDE (CAPD = 0x5b)
+                [!provide]                        PROVIDE (FCTL1 = 0x128)
+                [!provide]                        PROVIDE (FCTL2 = 0x12a)
+                [!provide]                        PROVIDE (FCTL3 = 0x12c)
+                [!provide]                        PROVIDE (P1IN = 0x20)
+                [!provide]                        PROVIDE (P1OUT = 0x21)
+                [!provide]                        PROVIDE (P1DIR = 0x22)
+                [!provide]                        PROVIDE (P1IFG = 0x23)
+                [!provide]                        PROVIDE (P1IES = 0x24)
+                [!provide]                        PROVIDE (P1IE = 0x25)
+                0x0000000000000026                PROVIDE (P1SEL = 0x26)
+                0x0000000000000041                PROVIDE (P1SEL2 = 0x41)
+                [!provide]                        PROVIDE (P1REN = 0x27)
+                0x0000000000000028                PROVIDE (P2IN = 0x28)
+                0x0000000000000029                PROVIDE (P2OUT = 0x29)
+                0x000000000000002a                PROVIDE (P2DIR = 0x2a)
+                0x000000000000002b                PROVIDE (P2IFG = 0x2b)
+                0x000000000000002c                PROVIDE (P2IES = 0x2c)
+                0x000000000000002d                PROVIDE (P2IE = 0x2d)
+                0x000000000000002e                PROVIDE (P2SEL = 0x2e)
+                [!provide]                        PROVIDE (P2SEL2 = 0x42)
+                [!provide]                        PROVIDE (P2REN = 0x2f)
+                [!provide]                        PROVIDE (P3IN = 0x18)
+                [!provide]                        PROVIDE (P3OUT = 0x19)
+                [!provide]                        PROVIDE (P3DIR = 0x1a)
+                [!provide]                        PROVIDE (P3SEL = 0x1b)
+                [!provide]                        PROVIDE (P3SEL2 = 0x43)
+                [!provide]                        PROVIDE (P3REN = 0x10)
+                [!provide]                        PROVIDE (TA0IV = 0x12e)
+                0x0000000000000160                PROVIDE (TA0CTL = 0x160)
+                0x0000000000000162                PROVIDE (TA0CCTL0 = 0x162)
+                [!provide]                        PROVIDE (TA0CCTL1 = 0x164)
+                [!provide]                        PROVIDE (TA0CCTL2 = 0x166)
+                [!provide]                        PROVIDE (TA0R = 0x170)
+                0x0000000000000172                PROVIDE (TA0CCR0 = 0x172)
+                [!provide]                        PROVIDE (TA0CCR1 = 0x174)
+                [!provide]                        PROVIDE (TA0CCR2 = 0x176)
+                [!provide]                        PROVIDE (TA1IV = 0x11e)
+                [!provide]                        PROVIDE (TA1CTL = 0x180)
+                [!provide]                        PROVIDE (TA1CCTL0 = 0x182)
+                [!provide]                        PROVIDE (TA1CCTL1 = 0x184)
+                [!provide]                        PROVIDE (TA1CCTL2 = 0x186)
+                [!provide]                        PROVIDE (TA1R = 0x190)
+                [!provide]                        PROVIDE (TA1CCR0 = 0x192)
+                [!provide]                        PROVIDE (TA1CCR1 = 0x194)
+                [!provide]                        PROVIDE (TA1CCR2 = 0x196)
+                0x0000000000000060                PROVIDE (UCA0CTL0 = 0x60)
+                0x0000000000000061                PROVIDE (UCA0CTL1 = 0x61)
+                0x0000000000000062                PROVIDE (UCA0BR0 = 0x62)
+                0x0000000000000063                PROVIDE (UCA0BR1 = 0x63)
+                0x0000000000000064                PROVIDE (UCA0MCTL = 0x64)
+                0x0000000000000065                PROVIDE (UCA0STAT = 0x65)
+                0x0000000000000066                PROVIDE (UCA0RXBUF = 0x66)
+                0x0000000000000067                PROVIDE (UCA0TXBUF = 0x67)
+                [!provide]                        PROVIDE (UCA0ABCTL = 0x5d)
+                [!provide]                        PROVIDE (UCA0IRTCTL = 0x5e)
+                [!provide]                        PROVIDE (UCA0IRRCTL = 0x5f)
+                0x0000000000000068                PROVIDE (UCB0CTL0 = 0x68)
+                0x0000000000000069                PROVIDE (UCB0CTL1 = 0x69)
+                0x000000000000006a                PROVIDE (UCB0BR0 = 0x6a)
+                0x000000000000006b                PROVIDE (UCB0BR1 = 0x6b)
+                [!provide]                        PROVIDE (UCB0I2CIE = 0x6c)
+                0x000000000000006d                PROVIDE (UCB0STAT = 0x6d)
+                0x000000000000006e                PROVIDE (UCB0RXBUF = 0x6e)
+                0x000000000000006f                PROVIDE (UCB0TXBUF = 0x6f)
+                [!provide]                        PROVIDE (UCB0I2COA = 0x118)
+                [!provide]                        PROVIDE (UCB0I2CSA = 0x11a)
+                0x0000000000000120                PROVIDE (WDTCTL = 0x120)
+                [!provide]                        PROVIDE (CALDCO_16MHZ = 0x10f8)
+                [!provide]                        PROVIDE (CALBC1_16MHZ = 0x10f9)
+                [!provide]                        PROVIDE (CALDCO_12MHZ = 0x10fa)
+                [!provide]                        PROVIDE (CALBC1_12MHZ = 0x10fb)
+                0x00000000000010fc                PROVIDE (CALDCO_8MHZ = 0x10fc)
+                0x00000000000010fd                PROVIDE (CALBC1_8MHZ = 0x10fd)
+                0x00000000000010fe                PROVIDE (CALDCO_1MHZ = 0x10fe)
+                0x00000000000010ff                PROVIDE (CALBC1_1MHZ = 0x10ff)
+                [!provide]                        PROVIDE (TLV_CHECKSUM = 0x10c0)
+                [!provide]                        PROVIDE (TLV_DCO_30_TAG = 0x10f6)
+                [!provide]                        PROVIDE (TLV_DCO_30_LEN = 0x10f7)
+                [!provide]                        PROVIDE (TLV_ADC10_1_TAG = 0x10da)
+                [!provide]                        PROVIDE (TLV_ADC10_1_LEN = 0x10db)
+LOAD /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a
+LOAD /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/crtend_no_eh.o
+LOAD /Users/felicitymatthews/ti/msp430-gcc/bin/../lib/gcc/msp430-elf/9.3.1/430/libgcc.a
+OUTPUT(build/nfc_reader.elf elf32-msp430)

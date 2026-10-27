@@ -77,3 +77,37 @@ python tools/tsi_host.py --dry-run write 0x80000000 0807060504030201
 ```
 
 ---
+
+## 5. See the modulated bitstream
+
+`tools/nfc_bitstream.py` prints exactly what the TRF7970A modulates for a packet, so you can compare it with what the chip's NFC demodulator outputs. It takes the same `test` / `write` / `read` / `raw` commands as `tsi_host.py` and doesn't need a board:
+
+```
+python tools/nfc_bitstream.py test
+python tools/nfc_bitstream.py write 0x80000000 0807060504030201
+```
+
+For each packet it shows:
+- **Bytes:** the frame, including the CRC the TRF adds.
+- **Bits in transmit order:** each byte is sent MSB first, as the SCuM modem RTL expects. The TRF7970A always sends LSB first, so when `TILELINK_MSB_FIRST` is 1 in `NFC/tilelink.h` the firmware reverses the order of the four bit pairs in every byte (each 1 out of 4 symbol then carries b7b6, b5b4, b3b2, b1b0, which the RTL decodes high bit first) and computes the CRC itself. Set it to 0, and `MSB_FIRST = False` in `tools/nfc_bitstream.py`, for standard ISO15693 bit order.
+- **1 out of 4 slots:** one character per 9.44 µs slot (`1` = carrier, `0` = pause), with the SOF (`01111011`) and EOF (`1101`). Each pair of bits picks which slot gets the pause.
+
+To compare with demodulator output:
+
+| Output | Option |
+|---|---|
+| Decoded bits, one line per packet | `--bits-only` |
+| Slot pattern with SOF/EOF, one line per packet | `--slots-only` |
+| `packet,slot,t_us,level` rows for plotting | `--csv out.csv` |
+| Graph of the envelope (needs `pip install matplotlib`) | `--plot`, or `--plot --save out.png` |
+| Graph zoomed to bytes A up to B (e.g. the body) | `--plot --bytes 17:25` |
+| Graph a CSV after editing its `level` column | `csv out.csv` (bad symbols decode as `?`) |
+
+For example, `python tools/nfc_bitstream.py --bits-only test > expected.txt`, then `diff` it against the demodulator's output.
+
+**Notes**
+- **Bit order:** if the demodulator collects bits MSB first, every byte will look reversed.
+- **Writes over 8 bytes** are split into several packets, one line each.
+- **This is the ideal stream** from the ISO15693 spec, not a capture. It doesn't show timing jitter or 10% ASK depth.
+
+---

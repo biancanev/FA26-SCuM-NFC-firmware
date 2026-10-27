@@ -10,7 +10,13 @@
 
 //===============================================================
 
-#define TRF_CMD_BYTES		5		// Reset FIFO, Transmit with CRC, Write Continuous, 2 length bytes
+#define TRF_CMD_BYTES		5		// Reset FIFO, Transmit with/without CRC, Write Continuous, 2 length bytes
+
+#if TILELINK_MSB_FIRST
+#define TILELINK_CRC_BYTES	2		// CRC is added by the firmware, so it takes FIFO space
+#else
+#define TILELINK_CRC_BYTES	0		// CRC is added by the TRF79xxA
+#endif
 
 static bool g_bTilelinkFieldOn = false;
 static bool g_bTilelinkAsk10 = false;
@@ -67,6 +73,42 @@ void Tilelink_setAsk10(bool bAsk10)
 	}
 }
 
+#if TILELINK_MSB_FIRST
+
+//===============================================================
+//
+// crc16 - CRC-16 per the NFC Modem spec / ISO15693 (poly 0x8408
+// reflected, init and xorout 0xFFFF). Same as the TRF79xxA's TX CRC.
+//
+//===============================================================
+
+static uint16_t crc16(const uint8_t * pui8Data, uint8_t ui8Length)
+{
+	uint16_t ui16Crc = 0xFFFF;
+	uint8_t ui8Bit;
+
+	while (ui8Length--)
+	{
+		ui16Crc ^= *pui8Data++;
+		for (ui8Bit = 0; ui8Bit < 8; ui8Bit++)
+		{
+			ui16Crc = (ui16Crc & 1) ? (ui16Crc >> 1) ^ 0x8408 : ui16Crc >> 1;
+		}
+	}
+
+	return ~ui16Crc;
+}
+
+// Reverse the order of the four bit pairs (b7b6 b5b4 b3b2 b1b0 -> b1b0 b3b2
+// b5b4 b7b6), keeping the bits within each pair. See TILELINK_MSB_FIRST.
+static uint8_t reversePairs(uint8_t ui8Byte)
+{
+	ui8Byte = (ui8Byte >> 4) | (ui8Byte << 4);
+	return ((ui8Byte & 0xCC) >> 2) | ((ui8Byte & 0x33) << 2);
+}
+
+#endif
+
 //===============================================================
 //
 // transmitFrame - Send the frame already placed after the TRF command
@@ -94,8 +136,25 @@ static tTrfStatus transmitFrame(uint8_t ui8Length, bool bExpectReply)
 	TRF79xxA_writeRegister(TRF79XXA_RX_NO_RESPONSE_WAIT_TIME,
 						   bExpectReply ? TILELINK_NO_RESP_READ : TILELINK_NO_RESP_WRITE);
 
-	pui8Buffer[0] = 0x8F;							// Reset FIFO
+#if TILELINK_MSB_FIRST
+	{
+		uint8_t * pui8Frame = pui8Buffer + TRF_CMD_BYTES;
+		uint16_t ui16Crc = crc16(pui8Frame, ui8Length);
+		uint8_t ui8Index;
+
+		pui8Frame[ui8Length++] = (uint8_t) ui16Crc;			// CRC little endian, as the TRF79xxA would send it
+		pui8Frame[ui8Length++] = (uint8_t) (ui16Crc >> 8);
+
+		for (ui8Index = 0; ui8Index < ui8Length; ui8Index++)
+		{
+			pui8Frame[ui8Index] = reversePairs(pui8Frame[ui8Index]);
+		}
+	}
+	pui8Buffer[1] = 0x90;							// Send without CRC
+#else
 	pui8Buffer[1] = 0x91;							// Send with CRC
+#endif
+	pui8Buffer[0] = 0x8F;							// Reset FIFO
 	pui8Buffer[2] = 0x3D;							// Write Continuous
 	pui8Buffer[3] = (ui8Length & 0xF0) >> 0x04;		// Length of packet in bytes - upper and middle nibbles
 	pui8Buffer[4] = ui8Length << 0x04;				// Length of packet in bytes - lower and broken nibbles
@@ -154,7 +213,7 @@ tTrfStatus Tilelink_sendRaw(uint8_t * pui8Frame, uint8_t ui8Length)
 	uint8_t * pui8Buffer = TRF79xxA_getTrfBuffer() + TRF_CMD_BYTES;
 	uint8_t ui8Index;
 
-	if (ui8Length > NFC_FIFO_SIZE - TRF_CMD_BYTES)
+	if (ui8Length > NFC_FIFO_SIZE - TRF_CMD_BYTES - TILELINK_CRC_BYTES)
 	{
 		return TX_ERROR;
 	}

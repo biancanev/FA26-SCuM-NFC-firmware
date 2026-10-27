@@ -37,6 +37,7 @@ BUILD = HERE / "build"
 
 sys.path.insert(0, str(ROOT / "tools"))
 import tsi_host as tool  # noqa: E402
+import nfc_bitstream as bitstream  # noqa: E402
 
 
 # ---- Pull the code under test and constants out of the firmware -------------
@@ -133,8 +134,12 @@ def make_cases(c, status_names):
     ok, bad = "OK\\r\\n", "ERR ARG\\r\\n"
 
     def fifo(frame: bytes) -> str:
+        if c["MSB_FIRST"]:   # firmware appends the CRC and bit-reverses every byte, TRF sends without CRC
+            frame, send = bytes(bitstream.fifo_byte(b) for b in tool.on_air(frame)), 0x90
+        else:
+            send = 0x91
         n = len(frame)
-        return (bytes([0x8F, 0x91, 0x3D, (n & 0xF0) >> 4, (n << 4) & 0xFF]) + frame).hex().upper()
+        return (bytes([0x8F, send, 0x3D, (n & 0xF0) >> 4, (n << 4) & 0xFF]) + frame).hex().upper()
 
     def writes(addr, data):
         return [fifo(tool.build_frame(tool.CMD_WRITE, addr + i, len(data[i:i + body_max]), data[i:i + body_max]))
@@ -151,7 +156,8 @@ def make_cases(c, status_names):
     ex = tool.EXAMPLE_BODY
     multi = ex + bytes.fromhex("1122334455")
     line_data = bytes(range(tool.LINE_MAX_DATA))
-    raw_max = min((line_size - 2) // 2, c["NFC_FIFO_SIZE"] - 5)
+    crc_bytes = 2 if c["MSB_FIRST"] else 0
+    raw_max = min((line_size - 2) // 2, c["NFC_FIFO_SIZE"] - 5 - crc_bytes)
     raw = bytes(range(raw_max))
     fail_data = bytes(range(1, body_max + 3))
 
@@ -209,8 +215,11 @@ def check_tool(c, status_names):
                         "(dry-run would show the wrong packets)")
     if len(f"W 00000000 {'00' * tool.LINE_MAX_DATA}") > c["LINE_SIZE"]:
         problems.append(f"LINE_MAX_DATA = {tool.LINE_MAX_DATA} makes 'W' lines longer than TILELINK_LINE_SIZE")
-    if len(f"X {'00' * tool.RAW_MAX}") > c["LINE_SIZE"] or tool.RAW_MAX > c["NFC_FIFO_SIZE"] - 5:
+    crc_bytes = 2 if c["MSB_FIRST"] else 0
+    if len(f"X {'00' * tool.RAW_MAX}") > c["LINE_SIZE"] or tool.RAW_MAX > c["NFC_FIFO_SIZE"] - 5 - crc_bytes:
         problems.append(f"RAW_MAX = {tool.RAW_MAX} exceeds what the firmware accepts")
+    if bitstream.MSB_FIRST != bool(c["MSB_FIRST"]):
+        problems.append(f"nfc_bitstream.MSB_FIRST = {bitstream.MSB_FIRST} but TILELINK_MSB_FIRST = {c['MSB_FIRST']}")
     if tool.TRF_STATUS != status_names:
         problems.append(f"TRF_STATUS {tool.TRF_STATUS} != tTrfStatus {status_names}")
     return problems
@@ -257,7 +266,7 @@ def main():
         failures += bool(problems)
 
     tool_problems = check_tool(consts, status_names)
-    print(("PASS  " if not tool_problems else "FAIL  ") + "tools/tsi_host.py matches the firmware")
+    print(("PASS  " if not tool_problems else "FAIL  ") + "tools/tsi_host.py and nfc_bitstream.py match the firmware")
     for p in tool_problems:
         print("      " + p)
 
